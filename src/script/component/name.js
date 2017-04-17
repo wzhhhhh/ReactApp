@@ -3,6 +3,6 @@
 
 
 let str = {
-	name: '&ssss'
+	name: 'wzh&rr'
 }
 export default str;
