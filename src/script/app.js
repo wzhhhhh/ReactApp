@@ -1,8 +1,11 @@
-// var str = require('./component/name.js')
-// console.log(str)
+import '../style/app.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import commentBox from './components/comment/commentBox.js';
 
 
-require ('../style/app.scss');
-import str from './component/name.js';
-console.log(str.name);
-console.log(1111)
+ReactDOM.render(
+	<commentBox />,
+	document.getElementById('root')
+)

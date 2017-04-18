@@ -1,7 +1,4 @@
 @charset 'utf-8';
-@import './name.scss';
-body{
-	height: 100%;
-	width: 100%;
-	background-color: $basecolor;
-}
+
+@import './usage/core/reset';
+@import './usage/module/app.scss'
