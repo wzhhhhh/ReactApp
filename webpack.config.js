@@ -21,6 +21,10 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: 'react-hot-loader!babel-loader'
 		},{
+			test: /\.jsx$/,
+			exclude: /node_modules/,
+			loader: 'react-hot-loader!babel-loader'
+		},{
 			test: /\.css$/,
 			loader: ExtractTextPlugin.extract({
 				fallback: 'style-loader',
@@ -48,13 +52,19 @@ module.exports = {
 		title: 'FirstApp'
 	}),
 	//压缩代码
-	new webpack.optimize.UglifyJsPlugin({
-		compress: {
-			warnings: false
-		},
-		output: {
-			comments: false
-		}
-	})
+	// new webpack.optimize.UglifyJsPlugin({
+	// 	compress: {
+	// 		warnings: false
+	// 	},
+	// 	output: {
+	// 		comments: false
+	// 	}
+	// }),
+	// 5: 更改环境变量
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
 	]
 }

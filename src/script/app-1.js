@@ -2,10 +2,9 @@ import '../style/app.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import commentBox from './components/comment/commentBox.js';
-
+import Name from './components/base/name.jsx';
 
 ReactDOM.render(
-	<commentBox />,
+	<Name />,
 	document.getElementById('root')
 )
