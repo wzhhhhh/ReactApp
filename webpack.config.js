@@ -19,7 +19,7 @@ module.exports = {
 		loaders: [{
 			test: /\.js$/,
 			exclude: /node_modules/,
-			loader: 'babel-loader'
+			loader: 'react-hot-loader!babel-loader'
 		},{
 			test: /\.css$/,
 			loader: ExtractTextPlugin.extract({
