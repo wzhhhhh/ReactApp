@@ -3,7 +3,7 @@ import React from 'react';
 import commentList from "./commentList.js"
 
 export default class commentBox extends React.Component {
-	render(){
+	render() {
 		return (
 			<commentList />
 		)
