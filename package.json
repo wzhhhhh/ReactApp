@@ -25,7 +25,14 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "classnames": "^2.2.5",
+    "flux": "^3.1.2",
+    "jquery": "^3.2.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0"
   }
 }
