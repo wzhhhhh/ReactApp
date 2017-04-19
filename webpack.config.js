@@ -8,7 +8,8 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/build',
-		filename: '[name]_[hash].js'
+		filename: 'app.js'
+		// filename: '[name]_[hash].js'
 	},
 	devServer:{
 		contentBase: './build',
@@ -41,9 +42,10 @@ module.exports = {
 	plugins: [
 	//css抽离插件
 	new ExtractTextPlugin({
-		filename: '[name]_[hash].css',
-		allChunks: true,
-		disable: false
+		// filename: '[name]_[hash].css',
+		filename: 'app.css'
+		// allChunks: true,
+		// disable: false
 	}),
 	//根据模板自动生成html
 	new HtmlWebpackPlugin({

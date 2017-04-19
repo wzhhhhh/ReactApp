@@ -1,13 +1,13 @@
 import React from 'react';
 
-import commentItem from "./commentItem.js"
-export default class commentList extends React.Component {
+import CommentItem from "./commentItem.js"
+export default class CommentList extends React.Component {
 	render() {
 		return (
 			<div>
-				<commentItem />
-				<commentItem />
-				<commentItem />
+				<CommentItem idx="1"/>
+				<CommentItem idx="2"/>
+				<CommentItem idx="3"/>
 			</div>
 		)
 	}

@@ -1,11 +1,15 @@
 import React from 'react';
 
-import commentList from "./commentList.js"
+import CommentList from "./commentList.js"
 
-export default class commentBox extends React.Component {
+
+export default class CommentBox extends React.Component {
 	render() {
+		console.log(2)
 		return (
-			<commentList />
+			<div>
+				<CommentList />
+			</div>
 		)
 	}
 }

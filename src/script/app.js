@@ -1,11 +1,18 @@
-import '../style/app.scss';
-import React from 'react';
-import ReactDOM from 'react-dom';
+require('../style/app.scss');
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import commentBox from './components/comment/commentBox.js';
+import CommentBox from './components/comment/CommentBox'
 
 
-ReactDOM.render(
-	<commentBox />,
+ReactDOM.render (
+	<CommentBox />,
 	document.getElementById('root')
 )
+
+
+
+
+
+
+
