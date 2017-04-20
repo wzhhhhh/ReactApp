@@ -66,5 +66,10 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     })
-	]
+	],
+	externals: {
+    'react': 'window.React',
+    'react-dom': 'window.ReactDOM',
+    'react-router': 'window.ReactRouter'
+  }
 }
