@@ -14,7 +14,14 @@ module.exports = {
 	devServer:{
 		contentBase: './build',
 		host: 'localhost',
-		port: 8000
+		port: 8000,
+		proxy: {
+          '/api': {
+            target: 'https://api.douban.com',
+            changeOrigin: true,
+            pathRewrite: {'^/api': ''}
+          }
+        }
 	},
 	module: {
 		loaders: [{
