@@ -14,12 +14,10 @@ export default class Index extends React.Component {
 	}
 	render(){
 		return (
-			<div>
-				<div className="DetailMain">
-					<DetailMainList goodsInfo={this.state.productInfo}/>
-					<DetailMainFooter />
-					<DetailMainAddCar />
-				</div>
+			<div className="DetailMain">
+				<DetailMainList goodsListInfo={this.state.productInfo}/>
+				<DetailMainFooter goodsFooterInfo={this.state.productInfo}/>
+				<DetailMainAddCar />
 			</div>
 		)
 	}

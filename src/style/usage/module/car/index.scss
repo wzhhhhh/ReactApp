@@ -1,21 +1,81 @@
 @charset "UTF-8";
 
-.DetailMain {
+.Index {
 	height: 100%;
 	width: 100%;
-	@include flexbox(column);
-	.DetailMainList {
-		@include flex();
+	.DetailIndex {
+		height: 100%;
 		width: 100%;
-		overflow: hidden;
-	}
-	.DetailMainFooter {
-		height: .5rem;
-		background: cyan;
-	}
-	.DetailMainAddCar {
-		display: none;
-		height: 2rem;
-		background: green;
+		.DetailMain {
+			height: 100%;
+			width: 100%;
+			@include flexbox();
+			@include flex-direction(column)
+			.DetailMainList {
+				@include flex();
+				width: 100%;
+				overflow-y:scroll;
+				img {
+					height: 4.3rem;
+					width: 100%;
+				}
+				.content {
+					padding: .1rem;
+					overflow: hidden;
+					h1 {
+						width: 100%;
+						font-size: .16rem;
+						height: .36rem;
+						line-height: .36rem;
+					}
+					.text {
+						width: 100%;
+						display: block;
+						padding-top:.14rem;
+						line-height: .18rem;
+						font-size: .14rem;
+					}
+				}
+			}
+			.DetailMainFooter {
+				height: 1.3rem;
+				.bg{
+					width: 100%;
+					height: .32rem;
+					background: red;
+				}
+				.box{
+					height: .46rem;
+					@include flexbox();
+					@include justify-content();
+					@include align-items();
+					padding: 0 .1rem;
+					.price {
+						@include flex();
+						line-height: .46rem;
+						height: 100%;
+						color: #fbb12a;
+						font-size: .16rem;
+					}
+					.kefu {
+						@include border(1px, #fbb12a, solid)
+						padding: .1rem .2rem;
+						color: #fbb12a;
+						width: .92rem;
+						height: .37rem;
+						font-size: .12rem;
+					}
+				}
+			}
+			.DetailMainAddCar {
+				display: none;
+				height: 2rem;
+				background: green;
+			}
+		}
 	}
 }
+
+		
+
+
