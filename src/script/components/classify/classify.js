@@ -22,6 +22,7 @@ class Classify extends React.Component{
     render(){
         return(
             <div className="Classify">
+                <div className="header">分类</div>
                <ul>
                 	<li>
                 		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>

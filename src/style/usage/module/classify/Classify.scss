@@ -3,6 +3,14 @@
 .Classify{
 	width: 100%;
 	// @include flex();
+	.header{
+		height: .47rem;
+		background: #000;
+		color: #fff;
+		text-align: center;
+		line-height: .47rem;
+		font-size: .185rem;
+	}
 	ul{
 		@include flexbox();
 		@include flex-wrap(wrap);
@@ -23,7 +31,7 @@
 				font-size: .15rem;
 				line-height: .915rem;
 				text-align: center;
-				background: rgba(0,0,0,.5)
+				background: rgba(0,0,0,.6)
 			}
 		}
 		li:nth-child(2n+1){
