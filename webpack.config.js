@@ -17,7 +17,7 @@ module.exports = {
 		port: 8000,
 		proxy: {
           '/api': {
-            target: 'https://api.douban.com',
+            target: 'http://m.miaohui.com/',
             changeOrigin: true,
             pathRewrite: {'^/api': ''}
           }

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.DetailMain {
+	height: 100%;
+	width: 100%;
+	@include flexbox(column);
+	.DetailMainList {
+		@include flex();
+		width: 100%;
+		overflow: hidden;
+	}
+	.DetailMainFooter {
+		height: .5rem;
+		background: cyan;
+	}
+	.DetailMainAddCar {
+		display: none;
+		height: 2rem;
+		background: green;
+	}
+}
