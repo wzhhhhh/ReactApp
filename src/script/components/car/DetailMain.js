@@ -9,7 +9,7 @@ export default class Index extends React.Component {
 		super(props)
 		this.state = {
 			productInfo: {},
-			productDetailImage: {}
+			addCarList: {}
 		}
 	}
 	render(){
@@ -17,7 +17,7 @@ export default class Index extends React.Component {
 			<div className="DetailMain">
 				<DetailMainList goodsListInfo={this.state.productInfo}/>
 				<DetailMainFooter goodsFooterInfo={this.state.productInfo}/>
-				<DetailMainAddCar />
+				<DetailMainAddCar goodsAddCarList={this.state.addCarList} goodsAddCarInfo={this.state.productInfo}/>
 			</div>
 		)
 	}
@@ -27,6 +27,13 @@ export default class Index extends React.Component {
 			.then((res)=>{
 				this.setState({
 					productInfo: res.goods
+				})
+			})
+		fetch('api/productModel/1343')
+			.then((response)=>response.json())
+			.then((res)=>{
+				this.setState({
+					addCarList: res.list
 				})
 			})
 	}
