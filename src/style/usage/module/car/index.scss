@@ -10,119 +10,201 @@
 			background: #fff;
 			height: 100%;
 			width: 100%;
-			@include flexbox();
-			@include flex-direction(column)
-			.DetailMainList {
-				@include flex();
+			.container{
+				@include flexbox();
+				@include flex-direction(column)
+				height: 100%;
 				width: 100%;
-				overflow-y:scroll;
-				img {
-					height: 4.3rem;
+				.DetailMainList {
+					@include flex();
 					width: 100%;
-				}
-				.content {
-					padding: .1rem;
-					overflow: hidden;
-					h1 {
+					overflow-y:scroll;
+					img {
+						height: 4.3rem;
 						width: 100%;
-						font-size: .16rem;
-						height: .36rem;
-						line-height: .36rem;
 					}
-					.text {
-						width: 100%;
-						display: block;
-						padding-top:.14rem;
-						line-height: .2rem;
-						font-size: .16rem;
-					}
-				}
-			}
-			.DetailMainFooter {
-				height: 1rem;
-				.box{
-					height: .5rem;
-					@include flexbox();
-					@include justify-content();
-					@include align-items();
-					padding: 0 .1rem;
-					.price {
-						@include flex();
-						line-height: .5rem;
-						height: 100%;
-						color: #fbb12a;
-						font-size: .16rem;
-					}
-					.kefu {
-						@include border(1px, #fbb12a, solid)
-						padding: .1rem .2rem;
-						color: #fbb12a;
-						width: .92rem;
-						height: .37rem;
-						font-size: .12rem;
+					.content {
+						padding: .1rem;
+						overflow: hidden;
+						h1 {
+							width: 100%;
+							font-size: .16rem;
+							height: .36rem;
+							line-height: .36rem;
+						}
+						.text {
+							width: 100%;
+							display: block;
+							padding-top:.14rem;
+							line-height: .2rem;
+							font-size: .16rem;
+						}
 					}
 				}
-				.footer{
-					@include flexbox();
-					height: .5rem;
-					.say{
+				.DetailMainFooter {
+					height: 1rem;
+					.box{
+						height: .5rem;
 						@include flexbox();
 						@include justify-content();
 						@include align-items();
-						width: .62rem;
-						height: 100%;
-						@include border(0 1px 0 0,#ebebeb,solid);
-						img{
-							width: 50%;
-							height: 50%;
+						padding: 0 .1rem;
+						.price {
+							@include flex();
+							line-height: .5rem;
+							height: 100%;
+							color: #fbb12a;
+							font-size: .16rem;
+						}
+						.kefu {
+							@include border(1px, #fbb12a, solid)
+							padding: .1rem .2rem;
+							color: #fbb12a;
+							width: .92rem;
+							height: .37rem;
+							font-size: .12rem;
 						}
 					}
-					.infoMore {
-						@include flex();
-						height: 100%;
-						line-height: .5rem;
-						color: #5b5b5b;
-						font-size: .14rem;
-						text-align: center;
+					.footer{
+						@include flexbox();
+						height: .5rem;
+						.say{
+							@include flexbox();
+							@include justify-content();
+							@include align-items();
+							width: .62rem;
+							height: 100%;
+							@include border(0 1px 0 0,#ebebeb,solid);
+							img{
+								width: 50%;
+								height: 50%;
+							}
+						}
+						.infoMore {
+							@include flex();
+							height: 100%;
+							line-height: .5rem;
+							color: #5b5b5b;
+							font-size: .14rem;
+							text-align: center;
+						}
+						.pay {
+							width: 1.04rem;
+							height: 100%;
+							line-height: .5rem;
+							color: #fff;
+							font-size: .16rem;
+							text-align: center;
+							background: #febe1e;
+						}
+						.addCar {
+							width: 1.04rem;
+							height: 100%;
+							line-height: .5rem;
+							color: #fff;
+							font-size: .16rem;
+							text-align: center;
+							background: #181818;
+						}
 					}
-					.pay {
-						width: 1.04rem;
-						height: 100%;
-						line-height: .5rem;
-						color: #fff;
-						font-size: .16rem;
-						text-align: center;
-						background: #febe1e;
+					&:after {
+						position: relative;
+						top: -1.3rem;
+						@include gradient(linear,bottom,rgba(255,255,255,1),rgba(255,255,255,0.5))
+						text-indent: -1rem;
+						display: block;
+						content:'lslfjlfjl';
+						width: 100%;
+						height: .3rem;
 					}
-					.addCar {
-						width: 1.04rem;
-						height: 100%;
-						line-height: .5rem;
-						color: #fff;
-						font-size: .16rem;
-						text-align: center;
-						background: #181818;
-					}
-				}
-				&:after {
-					position: relative;
-					top: -1.3rem;
-					@include gradient(linear,bottom,rgba(255,255,255,1),rgba(255,255,255,0.5))
-					text-indent: -1rem;
-					display: block;
-					content:'lslfjlfjl';
-					width: 100%;
-					height: .3rem;
 				}
 			}
-			.DetailMainAddCar {
-				height: 2rem;
-				background: green;
+			.modal{
+				// display: none;
+				// visibility: hidden;
+				width: 100%;
+				height: 100%;
+				background: rgba(255,255,255,.5);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index:9999;
+				@include flexbox();
+				@include flex-direction(column);
+				.empty {
+					@include flex();
+				}
+				.DetailMainAddCar {
+					height: 3.78rem;
+					background: #fff;
+					padding: .1rem;
+					.goodsInfo {
+						@include flexbox();
+						height: .73rem;
+						width: 100%;
+						.img {
+							width: .73rem;
+							height: 100%;
+							img {
+								width: 100%;
+								height: 100%;
+							}
+						}
+						.info {
+							@include flex();
+							padding: 0 .1rem;
+							.infoTitle {
+								font-size: .16rem;
+								line-height: .2rem;
+								color: #2b2b2b;
+							}
+							.price {
+								font-size: .2rem;
+								color: #f8bb24;
+								line-height: .3rem;
+							}
+						}
+					}
+					.goodsChoose {
+						height: 1.44rem;
+						width: 100%;
+						.chooseTitle {
+							display: block;
+							line-height: .44rem;
+							font-size: .16rem;
+						}
+						.chooses {
+							height: .98rem;
+							padding: 0 .07rem;
+							overflow-y: scroll;
+							span {
+								display: inline-block;
+								@include border(1px, #646464, solid,3px)
+								margin: .05rem;
+								font-size: .14rem;
+								line-height: .3rem;
+								color: #646464;
+								padding: 0 .05rem;
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 }
 
-		
+.DetailGoodsShow {
+	height: 100%;
+			width: 100%;
+	.imgBox {
+		height: 100%;
+		width: 100%;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}		
 
 

@@ -9,15 +9,20 @@ export default class Index extends React.Component {
 		super(props)
 		this.state = {
 			productInfo: {},
-			addCarList: {}
+			addCarList: []
 		}
 	}
 	render(){
 		return (
 			<div className="DetailMain">
-				<DetailMainList goodsListInfo={this.state.productInfo}/>
-				<DetailMainFooter goodsFooterInfo={this.state.productInfo}/>
-				<DetailMainAddCar goodsAddCarList={this.state.addCarList} goodsAddCarInfo={this.state.productInfo}/>
+				<div className="container">
+					<DetailMainList goodsListInfo={this.state.productInfo}/>
+					<DetailMainFooter goodsFooterInfo={this.state.productInfo}/>
+				</div>
+				<div className="modal">
+					<div className="empty"></div>
+					<DetailMainAddCar goodsAddCarList={this.state.addCarList} goodsAddCarInfo={this.state.productInfo}/>
+				</div>
 			</div>
 		)
 	}
