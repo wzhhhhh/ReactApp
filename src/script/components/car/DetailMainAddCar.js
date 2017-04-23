@@ -2,8 +2,6 @@ import React from 'react'
 
 export default class DetailMainList extends React.Component {
 	render(){
-		console.log(this.props.goodsAddCarList)
-		console.log(this.props.goodsAddCarInfo)
 		let lis = this.props.goodsAddCarList.map((item)=>{
 			return <span>{item.show_attr}</span>
 		})
@@ -28,20 +26,20 @@ export default class DetailMainList extends React.Component {
 					<div className="countNumber">
 						<span className="number">购买数量</span>
 						<div className="numberBox">
-							<input type="button" value="-"/>
-							<input type="text"/>
-							<input type="button" value="+"/>
+							<input type="button" className="decrease" value="-"/>
+							<input type="text" value="1" className="showNumber"/>
+							<input type="button" className="increase" value="+"/>
 						</div>
 					</div>
 					<div className="countPrice">
 						<span className="priceAll">商品总价</span>
 						<div className="priceBox">
-							<span className="count"></span>
-							<div className="choose"></div>
+							<span className="count">￥188</span>
+							<span className="choose">购买数量购买数量购买数量购买数量</span>
 						</div>
 					</div>
 				</div>
-				<div className="sure">确定</div>
+				<a href="" className="sure">确定</a>
 			</div>
 		)
 	}
