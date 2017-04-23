@@ -14,13 +14,13 @@ import EyeShot from './components/eye/eyeShot'
 
 ReactDOM.render((
 	//分类主页面
-	// <Classify />
+	//<Classify />
 	
 	//分类列表页
-	// <div>
-	// 	<Classifytopic />
-	// 	<Classifylist />
-	// </div>
+	//<div>
+	//	<Classifytopic />
+	//	<Classifylist />
+	//</div>
 	
 	//视野主页面
 	<div>

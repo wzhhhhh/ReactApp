@@ -3,14 +3,34 @@
 .eyeshot{
 	width: 100%;
 	.eyeheader{
+		position: relative;
 		height: .47rem;
 		background: #000;
 		color: #fff;
 		font-size: .185rem;
 		line-height: .47rem;
 		text-align: center;
-		.yo-ico{
-			
+		.listmore{
+			position: absolute;
+			right: .12rem;
+			top: 0rem;
+		}
+	}
+	.viewNav{
+		height: .52rem;
+		.nav{
+			background: #eee;
+			height: .52rem;
+			a{
+				padding: 0 .15rem; 
+				color: #666;
+				font-size: .15rem;
+				line-height: .5rem;
+				height: .5rem;
+			}
+			.active{
+				@include border(0 0 2px 0,#ffa000,solid)
+			}
 		}
 	}
 }

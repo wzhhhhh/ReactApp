@@ -1,95 +1,41 @@
 import React from "react"
 
 class Classify extends React.Component{
-	// constructor(props) {
-	//     super(props)
-	//     this.state = {
-	//       navigator: []
-	//     }
-	// }
+	constructor(props) {
+	    super(props)
+	    this.state = {
+	      classList: []
+	    }
+	}
 
-	// getClassify(list){
-	// 	return list.map((value,index)=>{
-	// 		return(
-	// 			<li>
- //            		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
- //            		<h1>全部商品</h1>
- //            	</li>
-	// 		)
-	// 	})
-	// }
 
     render(){
+        let lis = this.state.classList.map((value)=>{return (
+                <li>
+                    <img src={value.image} alt=""/>
+                    <h1>{value.name}</h1>
+                </li>
+            )})
         return(
             <div className="Classify">
                 <div className="header">分类</div>
                <ul>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
-                	<li>
-                		<img src="http://image.app.magicwe.com/images/201609/1473674096960910726.png" alt=""/>
-                		<h1>全部商品</h1>
-                	</li>
+                	{lis}
                 </ul> 
             </div>
         )
     }
 
-    // componentDidMount(){
-    // 	 console.log(11)
-    // 	// let type = this.props.list.type
-    // 	fetch(`/api/homeData`)
-    // 		.then((response)=>response.json())
-    // 		.then((res)=>{
-    // 			this.setState({
-    // 				url:res.list.navigator.image,
-    // 				name:res.list.navigator.name
-    // 			})
-    // 		})
-	   //  console.log(this.State.url)
-    // }
+    componentDidMount(){
+    	fetch('/api/homeData')
+    		.then((response)=>response.json())
+    		.then((res)=>{
+                console.log(res.list.navigator)
+    			this.setState({
+    				classList:res.list.navigator
+    			})
+    		})
+    }
 }
 
 export default Classify
