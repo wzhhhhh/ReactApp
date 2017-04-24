@@ -15,6 +15,7 @@ module.exports = {
 		contentBase: './build',
 		host: 'localhost',
 		port: 8000,
+
 		proxy:{
 			'/api':{
 				target:'http://m.miaohui.com',

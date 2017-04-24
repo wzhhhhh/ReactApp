@@ -41,3 +41,10 @@ import EyeShot from './components/eye/eyeShot'
 // 	// 	<EyeShot />
 // 	// </div>
 // ),document.getElementById('root'))
+
+// import Index from './components/index.js'
+
+// ReactDOM.render(
+// 	<Index/>,document.getElementById("root")
+// )
+
