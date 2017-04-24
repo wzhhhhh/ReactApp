@@ -1,8 +1,8 @@
 @charset 'utf-8';
 @import "./usage/core/reset";
-@import "./usage/module/common";
-@import "./usage/module/leftPersonal";
-@import "./usage/module/login";
+@import "./usage/module/mine/common";
+@import "./usage/module/mine/leftPersonal";
+@import "./usage/module/mine/login";
 body{
 	height: 100%;
 	width: 100%;
