@@ -15,13 +15,13 @@ module.exports = {
 		contentBase: './build',
 		host: 'localhost',
 		port: 8000,
-		proxy: {
-          '/api': {
-            target: 'https://api.douban.com',
-            changeOrigin: true,
-            pathRewrite: {'^/api': ''}
-          }
-        }
+		proxy:{
+			'/api':{
+				target:'http://m.miaohui.com',
+				changeOrigin:true,
+				pathRewrite:{'^/api':''}
+			}
+		}
 	},
 	module: {
 		loaders: [{
