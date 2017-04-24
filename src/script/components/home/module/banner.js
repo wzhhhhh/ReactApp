@@ -19,6 +19,6 @@ export default class Banner extends Component {
 			<Carousel extraClass ="home-banner">
 				{this.getBanner(this.props.banner)}
 			</Carousel>
-    )
+    	)
 	}
 }

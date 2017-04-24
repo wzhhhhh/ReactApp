@@ -1,0 +1,72 @@
+.leftpersonalpage{
+	@include flex();
+	position: absolute;
+	left: -81%;
+	width: 82.13%;
+	height: 100%;
+	background: #1f1f1f;
+	color:#fff;
+	padding:0 .1rem;
+	z-index: 1000;
+	.lheader{
+		padding:.16rem .2rem;
+		@include flexbox();
+		width: 100%;
+		@include border(0 0 1px 0,#7f7f7f,solid);
+		.tuo{
+			width:.73rem;
+			height:.73rem;
+			margin-right: .16rem;
+			img{
+				width: 100%;
+				height:100%;
+			}
+		}
+		.llogin{
+			margin-top:.15rem;
+			font-size: .14rem;
+			.orange{
+				display: block;
+				margin-top:.15rem;
+				color:#ffc21f;
+			}
+			/*.ljian{
+				width: .07rem;
+				height:.14rem;
+				img{
+					width: 100%;
+					height:100%;
+				}
+			}*/
+			
+		}
+	}
+
+	.leftpolist{
+		.ul{
+			li{
+				padding: .16rem .2rem;
+				img{
+					width: .22rem;
+					height:.16rem;
+					margin-right: .13rem;
+				}
+				span{
+					
+					font-size: .16rem;
+				}
+			}
+		}
+		.lshang{
+			@include border(0 0 1px 0,#7f7f7f,solid);
+		}
+		.lx{
+		position: absolute;
+		left: 20%;
+		bottom: 5%;
+			.oran{
+				color:#ffc21f;
+			}
+		}
+	}
+}
