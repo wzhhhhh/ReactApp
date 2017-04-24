@@ -1,7 +1,7 @@
 .leftpersonalpage{
 	@include flex();
 	position: absolute;
-	left: 0%;
+	left: -81%;
 	width: 82.13%;
 	height: 100%;
 	background: #1f1f1f;
@@ -47,7 +47,7 @@
 		.ul{
 			li{
 				padding: .16rem .2rem;
-				
+
 				img{
 					width: .22rem;
 					height:.16rem;
