@@ -1,8 +1,29 @@
-// var str = require('./component/name.js')
-// console.log(str)
+require('../style/app.scss');
+import React from 'react'
+import ReactDOM from 'react-dom'
 
+//分类主页面
+// import Classify from './components/classify/classify'
 
-require ('../style/app.scss');
-import str from './component/name.js';
-console.log(str.name);
-console.log(1111)
+//分类列表页
+// import Classifylist from './components/classify/classifyList/classifylist'
+// import Classifytopic from './components/classify/classifyList/classifytopic'
+
+//视野主页面
+import EyeShot from './components/eye/eyeShot'
+
+ReactDOM.render((
+	//分类主页面
+	//<Classify />
+	
+	//分类列表页
+	//<div>
+	//	<Classifytopic />
+	//	<Classifylist />
+	//</div>
+	
+	//视野主页面
+	<div>
+		<EyeShot />
+	</div>
+),document.getElementById('root'))
