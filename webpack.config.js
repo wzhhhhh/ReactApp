@@ -8,12 +8,12 @@ module.exports = {
 	},
 	output: {
 		path: __dirname + '/build',
-		filename: '[name]_[hash].js'
+		filename: 'app.js'
 	},
 	devServer:{
 		contentBase: './build',
 		host: 'localhost',
-		port: 8000
+		port: 8030
 	},
 	module: {
 		loaders: [{
@@ -37,7 +37,7 @@ module.exports = {
 	plugins: [
 	//css抽离插件
 	new ExtractTextPlugin({
-		filename: '[name]_[hash].css',
+		filename: 'app.css',
 		allChunks: true,
 		disable: false
 	}),
@@ -48,13 +48,24 @@ module.exports = {
 		title: 'FirstApp'
 	}),
 	//压缩代码
-	new webpack.optimize.UglifyJsPlugin({
-		compress: {
-			warnings: false
-		},
-		output: {
-			comments: false
-		}
-	})
-	]
+	// new webpack.optimize.UglifyJsPlugin({
+	// 	compress: {
+	// 		warnings: false
+	// 	},
+	// 	output: {
+	// 		comments: false
+	// 	}
+	// }),
+	new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
+	],
+
+	 externals: {
+    'react': 'window.React',
+    'react-dom': 'window.ReactDOM',
+    'react-router': 'window.ReactRouter'
+  }
 }

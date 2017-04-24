@@ -1,14 +1,11 @@
 require('../style/app.scss')
 
 import React from 'react'
-
 import ReactDOM from 'react-dom'
 
-import CommentBox from './components/comment/CommentBox'
-
-
+import Login from './component/login'
 
 ReactDOM.render (
-	<CommentBox />,
+	<Login />,
 	document.getElementById('root')
 	)

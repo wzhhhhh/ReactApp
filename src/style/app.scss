@@ -1,7 +1,16 @@
 @charset 'utf-8';
-@import './name.scss';
+@import "./usage/core/reset";
+@import "./usage/module/common";
+@import "./usage/module/leftPersonal";
+@import "./usage/module/login";
 body{
 	height: 100%;
 	width: 100%;
-	background-color: $basecolor;
+	background-color :$base-color;
+}
+#root{
+	height: 100%;
+	.ce{
+		height:100%;
+	}
 }
