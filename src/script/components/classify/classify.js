@@ -18,11 +18,15 @@ class Classify extends React.Component{
                 </li>
             )})
         return(
-            <div className="Classify">
-                <ul>
-                	{lis}
-                </ul> 
+            <div className="classbox">
+                <Header />
+                <div className="Classify">               
+                    <ul>
+                        {lis}
+                    </ul> 
+                </div>
             </div>
+            
         )
     }
 
