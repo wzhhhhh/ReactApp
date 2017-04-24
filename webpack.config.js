@@ -9,15 +9,27 @@ module.exports = {
 	output: {
 		path: __dirname + '/build',
 		filename: 'app.js'
+		// filename: '[name]_[hash].js'
 	},
 	devServer:{
 		contentBase: './build',
 		host: 'localhost',
-		port: 8030
+		port: 8000,
+		proxy:{
+			'/api':{
+				target:'http://m.miaohui.com',
+				changeOrigin:true,
+				pathRewrite:{'^/api':''}
+			}
+		}
 	},
 	module: {
 		loaders: [{
 			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: 'react-hot-loader!babel-loader'
+		},{
+			test: /\.jsx$/,
 			exclude: /node_modules/,
 			loader: 'react-hot-loader!babel-loader'
 		},{
@@ -37,9 +49,10 @@ module.exports = {
 	plugins: [
 	//css抽离插件
 	new ExtractTextPlugin({
-		filename: 'app.css',
-		allChunks: true,
-		disable: false
+		// filename: '[name]_[hash].css',
+		filename: 'app.css'
+		// allChunks: true,
+		// disable: false
 	}),
 	//根据模板自动生成html
 	new HtmlWebpackPlugin({
@@ -56,16 +69,20 @@ module.exports = {
 	// 		comments: false
 	// 	}
 	// }),
-	new webpack.DefinePlugin({
+
+	// 5: 更改环境变量
+    new webpack.DefinePlugin({
+
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
     })
 	],
+	externals: {
 
-	 externals: {
     'react': 'window.React',
     'react-dom': 'window.ReactDOM',
     'react-router': 'window.ReactRouter'
   }
 }
+

@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "Header"
+import Header from "./Header"
 
 class Classify extends React.Component{
 	constructor(props) {
@@ -19,8 +19,8 @@ class Classify extends React.Component{
             )})
         return(
             <div className="Classify">
-                <Header />
-                <ul>
+                <div className="header">分类</div>
+               <ul>
                 	{lis}
                 </ul> 
             </div>

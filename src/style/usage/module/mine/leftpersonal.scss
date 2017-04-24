@@ -1,13 +1,14 @@
 .leftpersonalpage{
 	@include flex();
 	position: absolute;
-	left: -81%;
+	left: 0%;
 	width: 82.13%;
 	height: 100%;
 	background: #1f1f1f;
 	color:#fff;
 	padding:0 .1rem;
 	z-index: 1000;
+
 	.lheader{
 		padding:.16rem .2rem;
 		@include flexbox();
@@ -46,6 +47,7 @@
 		.ul{
 			li{
 				padding: .16rem .2rem;
+				
 				img{
 					width: .22rem;
 					height:.16rem;

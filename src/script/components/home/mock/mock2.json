@@ -1,0 +1,35 @@
+{
+    "resultCode": 1,
+    "resultMsg": "成功",
+    "tipsMsg": "",
+    "adList": {
+        "middle": [
+            {
+                "ad_id": "36",
+                "ad_name": "无门槛现金券",
+                "ad_title": "每日优惠，用心等候",
+                "position_id": "8",
+                "media_type": "0",
+                "ad_link": "http://www.miaohui.com/u/turnplate?aid=20&$share$=false",
+                "ad_code": "http://image.app.magicwe.com/data/afficheimg/1485333697978427847.png",
+                "server_time": "1492784067",
+                "start_time": "1492741800",
+                "end_time": "1492828200",
+                "link_goods_id": "0"
+            },
+            {
+                "ad_id": "97",
+                "ad_name": "不见不伞",
+                "ad_title": "骄阳有我",
+                "position_id": "8",
+                "media_type": "0",
+                "ad_link": "http://www.miaohui.com/activity/?topicID=71",
+                "ad_code": "http://image.app.magicwe.com/data/afficheimg/1492165779768992449.jpg",
+                "server_time": "1492784067",
+                "start_time": "1492165800",
+                "end_time": "1492963140",
+                "link_goods_id": "0"
+            }
+        ]
+    }
+}

@@ -9,6 +9,10 @@ export default class LeftPersonalHeader extends Component {
 					<span>登录/注册</span>
 					<span className="orange">领取615元新人大礼包</span>
 				</div>
+				{/*<div className="llogin">
+					<span>用户名</span>
+					<span>手机号</span>
+				</div>*/}
 			</div>
 			)
 	}
