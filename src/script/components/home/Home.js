@@ -1,10 +1,10 @@
 import React,{Component} from 'react'
 
 
-import Banner from './build/banner'
-import HomeNav from './build/nav'
-import HomeView from './build/view'
-import HomeActivity from './build/activity'
+import Banner from './module/banner'
+import HomeNav from './module/nav'
+import HomeView from './module/view'
+import HomeActivity from './module/activity'
 
 
 
