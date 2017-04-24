@@ -2,7 +2,7 @@ import React , {Component}from 'react'
 import ReactDOM from 'react-dom'
 
 
-import Footer from './home/build/footer'
+import Footer from './home/module/footer'
 import Components from './home/component'
 
 export default class Index extends Component{
