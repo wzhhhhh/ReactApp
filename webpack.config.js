@@ -15,7 +15,6 @@ module.exports = {
 		contentBase: './build',
 		host: 'localhost',
 		port: 8000,
-
 		proxy:{
 			'/api':{
 				target:'http://m.miaohui.com',
@@ -70,16 +69,20 @@ module.exports = {
 	// 		comments: false
 	// 	}
 	// }),
+
 	// 5: 更改环境变量
     new webpack.DefinePlugin({
+
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
     })
 	],
 	externals: {
+
     'react': 'window.React',
     'react-dom': 'window.ReactDOM',
     'react-router': 'window.ReactRouter'
   }
 }
+
