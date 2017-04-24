@@ -1,0 +1,9 @@
+.prilist{
+	width: 100%;
+	height: .47rem;
+	overflow: hidden;
+	.topic{
+		@include flexbox();
+		@include justify-content(space-between);
+	}
+}
