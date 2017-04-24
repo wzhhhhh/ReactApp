@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 import Index from './components/Index'
 import Home from './components/home/component'
-import Banner from './components/home/build/banner'
+import Banner from './components/home/module/banner'
 
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
