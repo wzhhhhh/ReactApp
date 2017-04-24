@@ -15,7 +15,6 @@ module.exports = {
 		contentBase: './build',
 		host: 'localhost',
 		port: 8000,
-<<<<<<< HEAD
 		proxy:{
 			'/api':{
 				target:'http://m.miaohui.com',
@@ -23,15 +22,6 @@ module.exports = {
 				pathRewrite:{'^/api':''}
 			}
 		}
-=======
-		proxy: {
-          '/api': {
-            target: 'http://m.miaohui.com',
-            changeOrigin: true,
-            pathRewrite: {'^/api': ''}
-          }
-        }
->>>>>>> liu
 	},
 	module: {
 		loaders: [{
