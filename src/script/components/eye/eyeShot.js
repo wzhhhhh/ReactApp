@@ -1,19 +1,21 @@
 import React from "react"
 
 class EyeShot extends React.Component{
-	// constructor(props) {
-	//     super(props)
-	//     this.state = {
-	//       eyeShot: []
-	//     }
-	// }
+	constructor(props) {
+	    super(props)
+	    this.state = {
+	      eyeShot: []
+	    }
+	}
 	render(){
-		// let lis = this.state.classList.map((value)=>{return (
-  //               <li>
-  //                   <img src={value.image} alt=""/>
-  //                   <h1>{value.name}</h1>
-  //               </li>
-  //           )})
+		let list = this.state.eyeShot.map((value)=>{return (
+               <div className="viewList">
+					<a href="#qqq">
+						<img src={value.image_url} alt=""/>
+					</a>
+					<h2>{value.subtitle}</h2>
+				</div>
+            )})
 		return(
 			<div className="eyeshot">
 				<div className="eyeheader">
@@ -29,19 +31,21 @@ class EyeShot extends React.Component{
 					</div>
 					<i className="yo-ico navmore">&#xf033;</i>
 				</div>
+				<div className="viewListBox">
+					{list}
+				</div>
 			</div>
 		)
 	}
-	// componentDidMount(){
- //    	fetch('/api/getSpecialTopicList')
- //    		.then((response)=>response.json())
- //    		.then((res)=>{
- //                console.log(res.list.navigator)
- //    			this.setState({
- //    				eyeShot:res.specialTopicList
- //    			})
- //    		})
- //    }
+	componentDidMount(){
+    	fetch('/api/getSpecialTopicList')
+    		.then((response)=>response.json())
+    		.then((res)=>{
+    			this.setState({
+    				eyeShot:res.specialTopicList
+    			})
+    		})
+    }
 }
 
 export default EyeShot
