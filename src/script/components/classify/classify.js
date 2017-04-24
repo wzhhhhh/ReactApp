@@ -18,8 +18,7 @@ class Classify extends React.Component{
             )})
         return(
             <div className="Classify">
-                <div className="header">分类</div>
-               <ul>
+                <ul>
                 	{lis}
                 </ul> 
             </div>

@@ -15,8 +15,12 @@ class Classifytopic extends React.Component{
 					<li>101-2000</li>
 					<li>2001-4000</li>
 					<li>4000元以上</li>
-					<li>自定义价格 <input type="text"/>-<input type="text"/><input type="button" value="确定"
-				/></li>
+					<li>
+						自定义价格 
+						<input type="text"/>
+						-<input type="text"/>
+						<input type="button" value="确定"/>
+					</li>
 				</ul>
 			</div>
 			)
