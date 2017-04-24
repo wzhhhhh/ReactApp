@@ -1,8 +1,5 @@
 import React from "react"
-<<<<<<< HEAD
-=======
-import Header from "Header"
->>>>>>> login
+import Header from "./Header"
 
 class Classify extends React.Component{
 	constructor(props) {
