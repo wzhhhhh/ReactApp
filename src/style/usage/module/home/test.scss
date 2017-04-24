@@ -33,21 +33,25 @@
 			height:1.14rem;
 			width:100%;
 			padding-top:.18rem;
-			overflow-x:scroll;
+			overflow:hidden;
 			background: #FAFAFA;
+			.yo-scroller{
+				touch-action:none;
+			}
 			a{
+				display: inline-block;
 				padding:0 .1rem;
-			}
-			@include flexbox()
-			img{
-				width:.58rem;
-				height: .58rem;
-			}
-			p{
-				font-size:.14rem;
-				text-align:center;
-				line-height:.38rem;
-				color:#000;
+				width:.78rem;
+				img{
+					width:.58rem;
+					height: .58rem;
+				}
+				p{
+					font-size:.14rem;
+					text-align:center;
+					line-height:.38rem;
+					color:#000;
+				}
 			}
 		}
 		.home-view{

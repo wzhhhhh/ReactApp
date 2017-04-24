@@ -1,4 +1,6 @@
 import React,{Component} from 'react'
+import Scroller from '../../../../component_dev/scroller/src';
+
 
 export default class HomeNav extends Component {
 	getnavpic(url){
@@ -11,7 +13,13 @@ export default class HomeNav extends Component {
   	render(){
    		return (
 	    	<div className="home-nav">
-				{this.getnavpic(this.props.navpic)}
+		    	<Scroller
+		    		containerExtraStyle={{width:'9.36rem'}}
+					scrollX={true}
+					scrollY={false}
+		    	>
+					{this.getnavpic(this.props.navpic)}
+		    	</Scroller>			
 	    	</div>
 	    )
 	}

@@ -11,7 +11,7 @@ import Classify from './components/classify/classify'
 import EyeShot from './components/eye/eyeShot'
 import Cart from './components/car/Cart'
 import Login from './components/mine/login'
->>>>>>> master
+
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render((
