@@ -3,6 +3,7 @@ require('../style/app.scss');
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+
 import Index from './components/Index'
 import Home from './components/home/component'
 
@@ -25,4 +26,4 @@ ReactDOM.render((
 			<route path="mine" component={Login}/>
 		</Route>
 	</Router>	
-	),(document.getElementById('root')))
+),(document.getElementById('root')))
