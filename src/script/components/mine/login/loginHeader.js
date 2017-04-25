@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default class  LoginHeader extends React.Component {
 	render (){
@@ -7,7 +8,7 @@ export default class  LoginHeader extends React.Component {
 				<div className="lxkf">联系客服</div>
 				<ul className="lzhong">
 					<li className="ltu"><img src="./images/avatar.png" alt="" /></li>
-					<li>点击登录</li>
+					<li><Link to="/onlogin">点击登录</Link></li>
 					<li className="lhuise">速来登录，获得全球创意</li>
 				</ul>
 				{/*<ul className="lzhong">
