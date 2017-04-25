@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
-import {browserHistory} from 'react-router'
+import Suggest from '../../../component_dev/suggest/src';
+
+
 
 import Header from './module/header'
 export default class Search extends Component {

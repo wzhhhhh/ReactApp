@@ -1,12 +1,13 @@
 import React,{Component} from 'react'
-import HomeList from '../../../component_dev/list/src';
-console.dir(HomeList)
+import Loading,{loading} from '../../../component_dev/Loading/src'
+import Scroler from '../../../component_dev/scroller/src';
+
 
 import Banner from './module/banner'
 import HomeNav from './module/nav'
 import HomeView from './module/view'
 import HomeActivity from './module/activity'
-import List from './module/list'
+import HomeList from './module/list'
 
 
 export default class Home extends Component {
@@ -17,18 +18,38 @@ export default class Home extends Component {
 			navpic:[],
 			viewtitle:[],
 			activity:[],
-			list:[]
+			list:[],
+			page:2
 		}
 	}
+	componentWillMount() {
+   		loading.show()
+ 	}
   	render(){
    		return (
-	    	<div className="home-content">
-	    		<Banner banner={this.state.banner} />
-	    		<HomeNav navpic={this.state.navpic} />
-				<HomeView viewtitle={this.state.viewtitle} />
-				<HomeActivity activity={this.state.activity}/>
-				<List list={this.state.list}></List>
-	    	</div>	
+   			<Scroler
+				ref="loading"
+				useLoadMore={true}
+				onLoad={() => {
+					fetch(`/api/homeData?page=${this.state.page++}&size=10`)
+					.then((response)=>response.json())
+					.then((res)=>{
+						this.setState({
+							list:this.state.list.concat(res.list.goods)
+						})
+					})
+
+		        this.refs.loading.stopLoading(true);
+		    }}
+   			>
+		    	<div className="home-content">
+		    		<Banner banner={this.state.banner} />
+		    		<HomeNav navpic={this.state.navpic} />
+					<HomeView viewtitle={this.state.viewtitle} />
+					<HomeActivity activity={this.state.activity}/>
+					<HomeList list={this.state.list}></HomeList>
+		    	</div>	
+	    	</Scroler>
 	    )
 	}
 	componentDidMount(){
@@ -37,11 +58,12 @@ export default class Home extends Component {
 		.then((res)=>{
 			this.setState({
 				banner:res.list.banner,
-				navpic:res.list.navigator,
+				navpic:res.list.category,
 				viewtitle:res.list.topic,
 				activity:res.list.promotions,
 				list:res.list.goods
 			})
 		})
+		loading.hide()
 	}
 }

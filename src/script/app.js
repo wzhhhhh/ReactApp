@@ -14,7 +14,7 @@ import CartIndex from './components/car/CartIndex'
 import Login from './components/mine/login'
 import Search from  './components/home/search'
 
-console.dir(Search)
+
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render((

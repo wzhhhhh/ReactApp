@@ -1,12 +1,13 @@
 import React,{Component} from 'react'
 import Scroller from '../../../../component_dev/scroller/src';
+import {Link} from 'react-router'
 
 
 export default class HomeNav extends Component {
 	getnavpic(url){
 		return  url.map((value,index)=>{
 			return (
-				<a href="#javascript:;"> <img src={value.icon} /> <p>{value.name}</p> </a>
+				<Link to={`/classList/${value.cat_id}`}> <img src={value.icon} /> <p>{value.cat_name}</p> </Link>
 				)
 		})
 	}
