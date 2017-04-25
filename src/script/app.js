@@ -12,6 +12,8 @@ import Classify from './components/classify/classify'
 import EyeShot from './components/eye/eyeShot'
 import CartIndex from './components/car/CartIndex'
 import Login from './components/mine/login'
+import Detail from './components/car/DetailIndex'
+import DetailGoodsShow from './components/car/DetailGoodsShow'
 
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
@@ -25,5 +27,7 @@ ReactDOM.render((
 			<route path="cart" component={CartIndex}/>
 			<route path="mine" component={Login}/>
 		</Route>
+		<Route path="/detail/:id" component={Detail}/>
+		<Route path="detailGoodsShow/:id" component={DetailGoodsShow}/>
 	</Router>	
 ),(document.getElementById('root')))

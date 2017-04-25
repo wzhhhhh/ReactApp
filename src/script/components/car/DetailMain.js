@@ -4,7 +4,7 @@ import DetailMainList from './DetailMainList.js'
 import DetailMainFooter from './DetailMainFooter.js'
 import DetailMainAddCar from './DetailMainAddCar.js'
 
-export default class Index extends React.Component {
+export default class DetailMain extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
@@ -12,12 +12,15 @@ export default class Index extends React.Component {
 			addCarList: []
 		}
 	}
+	goToDetailShow(id){
+		this.props.lll(id);
+	}
 	render(){
 		return (
 			<div className="DetailMain">
 				<div className="container">
 					<DetailMainList goodsListInfo={this.state.productInfo}/>
-					<DetailMainFooter goodsFooterInfo={this.state.productInfo}/>
+					<DetailMainFooter onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
 				</div>
 				<div className="modal">
 					<div className="empty"></div>
@@ -27,14 +30,16 @@ export default class Index extends React.Component {
 		)
 	}
 	componentDidMount(){
-		fetch('api/productInfo/1343')
+		// fetch(`api/productInfo/${this.props.params.id}`)
+		fetch('api/productInfo/1344')
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
 					productInfo: res.goods
 				})
 			})
-		fetch('api/productModel/1343')
+		// fetch(`api/productModel/${this.props.params.id}`)
+		fetch('api/productModel/1344')
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
