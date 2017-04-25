@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * 加载中组件
  * @component loading
  * @type {Object}
@@ -9,6 +10,18 @@
  */
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
+=======
+ * 加载动画组件
+ * @component Loading
+ * @example
+ * <Loading text="text" />
+ * @description 加载动画组件
+ * @author zongze.li
+ */
+import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
+import './style.scss';
+>>>>>>> master
 
 const propTypes = {
     text: PropTypes.string,

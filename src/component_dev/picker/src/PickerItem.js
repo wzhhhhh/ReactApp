@@ -2,6 +2,10 @@
  * option组件
  */
 import React, { Component, PropTypes } from 'react';
+<<<<<<< HEAD
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 
 export default class extends Component {
 

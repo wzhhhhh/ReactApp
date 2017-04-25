@@ -40,6 +40,7 @@ ReactDOM.render((
 			<route path="mine" component={Login}/>
 		</Route>
 	</Router>	
+<<<<<<< HEAD
 	),(document.getElementById('root')))
 
 
@@ -85,3 +86,6 @@ ReactDOM.render((
 // 	)
 // >>>>>>> login
 // >>>>>>> master
+=======
+	),(document.getElementById('root')))
+>>>>>>> master
