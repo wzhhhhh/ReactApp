@@ -8,20 +8,25 @@
 		width:.67rem;
 		height: 100%;
 		text-align: center;
+		padding-top: .05rem;
 		a{
 			display:inline-block;
-			width:.32rem;
-			height: .32rem;
-			padding-top: .06rem;
-			img{
-				width:.32rem;
-				height: .32rem;
-			}
+			line-height: .67rem;
+			width:.38rem;
+			height: .38rem;
+			background: url('/images/avatar.png') no-repeat center;
+			background-size: .32rem;
 		}
 	}
 	.home-user{
 		a{
 			@include border-radius(50%)
+		}
+	}
+	.home-scan{
+		a{
+			background: url('/images/home_qrcode_n.png') no-repeat center;
+			background-size: .32rem;
 		}
 	}
 	.home-search{

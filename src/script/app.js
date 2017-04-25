@@ -12,18 +12,22 @@ import Classify from './components/classify/classify'
 import EyeShot from './components/eye/eyeShot'
 import CartIndex from './components/car/CartIndex'
 import Login from './components/mine/login'
+import Search from  './components/home/search'
 
+console.dir(Search)
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
 			<IndexRedirect to="/home" />
-			<route path="home" component={Home}/>
-			<route path="classify" component={Classify}/>
-			<route path="eyeShot" component={EyeShot}/>
-			<route path="cart" component={CartIndex}/>
-			<route path="mine" component={Login}/>
+			<Route path="home" component={Home}/>
+			<Route path="classify" component={Classify}/>
+			<Route path="eyeShot" component={EyeShot}/>
+			<Route path="cart" component={CartIndex}/>
+			<Route path="mine" component={Login}/>
+		</Route>
+		<Route path="/search" component={Search}>
 		</Route>
 	</Router>	
 ),(document.getElementById('root')))

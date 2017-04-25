@@ -14,7 +14,6 @@ export default class HomeNav extends Component {
    		return (
 	    	<div className="home-nav">
 		    	<Scroller
-		    		containerExtraStyle={{width:'9.36rem'}}
 					scrollX={true}
 					scrollY={false}
 		    	>

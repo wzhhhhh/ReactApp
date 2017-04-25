@@ -1,11 +1,12 @@
 import React,{Component} from 'react'
-
+import HomeList from '../../../component_dev/list/src';
+console.dir(HomeList)
 
 import Banner from './module/banner'
 import HomeNav from './module/nav'
 import HomeView from './module/view'
 import HomeActivity from './module/activity'
-
+import List from './module/list'
 
 
 export default class Home extends Component {
@@ -15,9 +16,9 @@ export default class Home extends Component {
 			banner:[<div/>],
 			navpic:[],
 			viewtitle:[],
-			activity:[]
+			activity:[],
+			list:[]
 		}
-		
 	}
   	render(){
    		return (
@@ -26,7 +27,7 @@ export default class Home extends Component {
 	    		<HomeNav navpic={this.state.navpic} />
 				<HomeView viewtitle={this.state.viewtitle} />
 				<HomeActivity activity={this.state.activity}/>
-				<img src="http://image.app.magicwe.com/images/201704/goods_img/1344_L_1492591839082.jpg"/>
+				<List list={this.state.list}></List>
 	    	</div>	
 	    )
 	}
@@ -38,7 +39,8 @@ export default class Home extends Component {
 				banner:res.list.banner,
 				navpic:res.list.navigator,
 				viewtitle:res.list.topic,
-				activity:res.list.promotions
+				activity:res.list.promotions,
+				list:res.list.goods
 			})
 		})
 	}
