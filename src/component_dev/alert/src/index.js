@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Alert from './alert';
@@ -41,4 +42,11 @@ export default function Alert(content = '', title = '', btnText = ['确定', '']
     }
     return yoConfirm(content, title, btnText, animation, false);
 }
+>>>>>>> master
+=======
+import '../../common/tapEventPluginInit';
+import './style.scss';
+import Alert from './alert';
+
+export default Alert;
 >>>>>>> master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Scroller from './scroller';
@@ -33,8 +34,13 @@ import { getElementOffsetY, getOnlyChild } from '../../common/util';
 import classNames from 'classnames';
 import LazyImage from '../../lazyimage';
 import Sticky from '../../sticky';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import Scroller from './scroller';
 
+<<<<<<< HEAD
 const REFRESHSTATUS = {
     PULL: 'pullrefresh_pull',
     RELEASE: 'pullrefresh_release',
@@ -1510,4 +1516,7 @@ Scroller.defaultProps = defaultProps;
 Scroller.propTypes = propTypes;
 Scroller.Sticky = Sticky;
 Scroller.LazyImage = LazyImage;
+>>>>>>> master
+=======
+export default Scroller;
 >>>>>>> master

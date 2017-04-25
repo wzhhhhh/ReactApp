@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import List from './list';
@@ -32,9 +33,13 @@ import {
     DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT,
     inheritProps
 } from '../../common/util';
+=======
+>>>>>>> master
 import '../../common/tapEventPluginInit';
 import './style.scss';
+import List from './list';
 
+<<<<<<< HEAD
 const defaultProps = {
     infinite: false,
     offsetY: 0,
@@ -767,4 +772,7 @@ export default class List extends Component {
 List.defaultProps = defaultProps;
 List.propTypes = propTypes;
 List.LazyImage = LazyImage;
+>>>>>>> master
+=======
+export default List;
 >>>>>>> master

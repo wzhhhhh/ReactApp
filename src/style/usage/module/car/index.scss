@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+//DetailIndex
 .Index {
 	height: 100%;
 	width: 100%;
@@ -277,7 +278,7 @@
 		}
 	}
 }
-
+//DetailGoodsShow
 .DetailGoodsShow {
 	height: 100%;
 			width: 100%;
@@ -291,4 +292,40 @@
 	}
 }		
 
+
+//CartIndex
+@import '../../fragment/yo-header';
+// @include yo-header(
+// 	$name: cartHeader,
+// 	$bgcolor: #090909,
+// 	$color: #fff,
+// 	$font-size: .2rem,
+// 	$item-font-size: .16rem,
+// 	$item-space: .1rem
+// ){}
+
+.m-box{
+	@include flexbox();
+	@include flex-direction(column);
+	width: 100%;
+	.cartMain {
+		@include flex();
+		@include flexbox();
+		@include flex-direction(column);
+		width: 100%;
+		.yo-header-cartHeader {
+			height: .5rem;
+			width: 100%;
+		}
+		.cartList {
+			@include flex();
+			padding: 0 .1rem;
+		}
+		.cartCount {
+			padding: .1rem;
+			height: .52rem;
+			width: 100%;
+		}
+	}
+}
 

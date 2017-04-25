@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import MultiList from './multilist';
@@ -13,22 +14,13 @@ export default MultiList;
  * @instructions {instruInfo: ./multilist/async.md}{instruUrl: multilist/async.html?hideIcon}
  * @instructions {instruInfo: ./multilist/personal.md}{instruUrl: multilist/product.html?hideIcon}
  */
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
-import React, {
-    Component,
-    PropTypes
-} from 'react';
-import classNames from 'classnames';
-import List from '../../list/src';
-import {
-    CheckboxItem,
-    RadioItem,
-    MenuItem,
-    EmptyList,
-    FaultList,
-    LoadingList
-} from './multilistitem.js';
+import MultiList from './multilist';
 
+<<<<<<< HEAD
 export default class MultiList extends Component {
     static propTypes = {
         /**
@@ -530,4 +522,7 @@ export default class MultiList extends Component {
         );
     }
 }
+>>>>>>> master
+=======
+export default MultiList;
 >>>>>>> master

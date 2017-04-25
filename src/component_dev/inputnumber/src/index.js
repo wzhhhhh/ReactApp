@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import InputNumber from './inputnumber';
@@ -20,12 +21,13 @@ export default InputNumber;
  * @author qingguo.xu
  */
 
+=======
+>>>>>>> master
 import '../../common/tapEventPluginInit';
-import React, { Component, PropTypes } from 'react';
-import Touchable from '../../touchable/src';
-import classNames from 'classnames';
 import './style.scss';
+import InputNumber from './inputnumber';
 
+<<<<<<< HEAD
 const defaultProps = {
     value: 0,
     step: 1,
@@ -285,4 +287,7 @@ export default class Number extends Component {
 
 Number.defaultProps = defaultProps;
 Number.propTypes = propTypes;
+>>>>>>> master
+=======
+export default InputNumber;
 >>>>>>> master

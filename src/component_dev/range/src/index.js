@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Range from './range';
@@ -20,8 +21,13 @@ import RangeCore from './RangeCore';
 import debounce from 'lodash/debounce';
 import { getArrayByLength } from '../../common/util';
 import classNames from 'classnames';
+=======
+>>>>>>> master
 import '../../common/tapEventPluginInit';
+import './style.scss';
+import Range from './range';
 
+<<<<<<< HEAD
 const propTypes = {
     /**
      * 禁用滑块
@@ -505,4 +511,7 @@ export default class Range extends Component {
 
 Range.propTypes = propTypes;
 Range.defaultProps = RangeDefaultProps;
+>>>>>>> master
+=======
+export default Range;
 >>>>>>> master

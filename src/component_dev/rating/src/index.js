@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Rating from './rating.js';
@@ -16,8 +17,13 @@ export default Rating;
 import React, { Component, PropTypes } from 'react';
 import { getArrayByLength } from '../../common/util';
 import './style.scss';
+=======
+>>>>>>> master
 import '../../common/tapEventPluginInit';
+import './style.scss';
+import Rating from './rating.js';
 
+<<<<<<< HEAD
 const defaultProps = {
     extraClass: '',
     total: 5,
@@ -114,4 +120,7 @@ export default class Rating extends Component {
 
 Rating.propTypes = propTypes;
 Rating.defaultProps = defaultProps;
+>>>>>>> master
+=======
+export default Rating;
 >>>>>>> master

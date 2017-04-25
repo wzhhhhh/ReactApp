@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Calendar from './calendar';
@@ -26,8 +27,13 @@ import CalendarItem from './CalendarItem.js';
 import GroupList from '../../grouplist/src/';
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import Calendar from './calendar';
 
+<<<<<<< HEAD
 const defaultProps = {
     duration: 90,
     extraClass: '',
@@ -170,4 +176,7 @@ export default class Calendar extends Component {
 
 Calendar.propTypes = propTypes;
 Calendar.defaultProps = defaultProps;
+>>>>>>> master
+=======
+export default Calendar;
 >>>>>>> master

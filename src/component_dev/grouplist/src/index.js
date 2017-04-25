@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import GroupList from './grouplist';
@@ -28,8 +29,13 @@ import {
 } from '../../common/util';
 import classNames from 'classnames';
 import IndexNavBar from './IndexNavBar';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import GroupList from './grouplist';
 
+<<<<<<< HEAD
 const propTypes = {
     /**
      * @property dataSource
@@ -701,4 +707,7 @@ export default class GroupList extends Component {
 
 GroupList.propTypes = propTypes;
 GroupList.defaultProps = defaultProps;
+>>>>>>> master
+=======
+export default GroupList;
 >>>>>>> master

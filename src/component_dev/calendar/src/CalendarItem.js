@@ -3,6 +3,7 @@
  * 某一天的数据显示
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, PropTypes } from 'react';
 import getClassNames from 'classnames';
 import Touchable from '../../touchable/src/touchable';
@@ -11,6 +12,11 @@ import '../../common/tapEventPluginInit.js';
 import React, { Component, PropTypes } from 'react';
 import getClassNames from 'classnames';
 import Touchable from '../../touchable/src';
+>>>>>>> master
+=======
+import React, { Component, PropTypes } from 'react';
+import getClassNames from 'classnames';
+import Touchable from '../../touchable/src/touchable';
 >>>>>>> master
 
 const propTypes = {
@@ -66,9 +72,13 @@ export default class WeekItem extends Component {
                 classNames += 'disabled ';
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             classNames = getClassNames(classNames).trim();
 =======
 
+>>>>>>> master
+=======
+            classNames = getClassNames(classNames).trim();
 >>>>>>> master
             const ret = [
                 <span key={0} className="day">{item.day}</span>,
@@ -81,9 +91,13 @@ export default class WeekItem extends Component {
                 <Touchable key={i} onTap={() => this.handleChange(fullDay)} internalUse={true}>
                     <li
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className={classNames || null}
 =======
                         className={classNames ? getClassNames(classNames) : null}
+>>>>>>> master
+=======
+                        className={classNames || null}
 >>>>>>> master
                     >
                         {renderDate(item, ret) || ret}

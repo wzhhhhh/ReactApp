@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import SwipeMenuList from './swipemenulist';
@@ -16,8 +17,13 @@ export default SwipeMenuList;
 import React, { Component, PropTypes } from 'react';
 import List from '../../list/src';
 import SwipeMenu from '../../swipemenu/src';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import SwipeMenuList from './swipemenulist';
 
+<<<<<<< HEAD
 const noop = () => {
 };
 
@@ -521,4 +527,7 @@ export default class SwipeMenuList extends Component {
         );
     }
 }
+>>>>>>> master
+=======
+export default SwipeMenuList;
 >>>>>>> master

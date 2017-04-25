@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Toast from './toast.js';
@@ -19,8 +20,13 @@ export default Toast;
  */
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import Toast from './toast.js';
 
+<<<<<<< HEAD
 let that = null;
 const container = document.createElement('div'),
 
@@ -117,4 +123,7 @@ export default {
         return this;
     }
 };
+>>>>>>> master
+=======
+export default Toast;
 >>>>>>> master

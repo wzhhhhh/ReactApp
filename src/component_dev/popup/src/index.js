@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Popup from './popup';
@@ -19,8 +20,13 @@ export default Popup;
 
 import Modal from '../../modal/src';
 import React, { Component, PropTypes } from 'react';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import Popup from './popup';
 
+<<<<<<< HEAD
 const noop = () => {
 };
 
@@ -141,4 +147,7 @@ export default class Popup extends Component {
 
 Popup.propTypes = propTypes;
 Popup.defaultProps = defaultPros;
+>>>>>>> master
+=======
+export default Popup;
 >>>>>>> master

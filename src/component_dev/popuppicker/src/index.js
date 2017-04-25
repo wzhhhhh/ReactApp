@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import PopupPicker from './popuppicker';
@@ -375,6 +376,11 @@ class PopupPicker extends Component {
 
 PopupPicker.propTypes = propTypes;
 PopupPicker.defaultProps = defaultProps;
+>>>>>>> master
+=======
+import '../../common/tapEventPluginInit';
+import './style.scss';
+import PopupPicker from './popuppicker';
 >>>>>>> master
 
 export default PopupPicker;

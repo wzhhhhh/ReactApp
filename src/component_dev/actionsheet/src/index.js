@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import ActionSheet from './actionsheet';
@@ -19,8 +20,13 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Touchable from '../../touchable/src';
 import Popup from '../../popup/src';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import ActionSheet from './actionsheet';
 
+<<<<<<< HEAD
 let that = null;
 const container = document.createElement('div');
 
@@ -99,4 +105,7 @@ export default ({ menu, title = '', cancelText = '取消' }) => that.setState({
     title,
     cancelText
 });
+>>>>>>> master
+=======
+export default ActionSheet;
 >>>>>>> master

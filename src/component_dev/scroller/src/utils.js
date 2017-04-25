@@ -140,6 +140,7 @@ const utils = (() => {
         transformOrigin: _prefixStyle('transformOrigin')
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src/component_dev/scroller/src/utils.js
     me.preventDefaultException = (el, exceptions) => {
         const keys = Object.keys(exceptions);
@@ -166,6 +167,14 @@ const utils = (() => {
         for (const i in exceptions) {
             if (exceptions[i].test(el[i])) {
 >>>>>>> master:src/component_dev/scroller/src/utils.js
+=======
+    me.preventDefaultException = (el, exceptions) => {
+        const keys = Object.keys(exceptions);
+
+        for (let i = 0, len = keys.length; i < len; i++) {
+            const attr = keys[i];
+            if (exceptions[attr].test(el[attr])) {
+>>>>>>> master
                 return true;
             }
         }

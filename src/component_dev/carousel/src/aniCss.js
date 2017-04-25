@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default () => ({
     handleData(aniObj, children) {
         return children;
@@ -6,6 +7,11 @@ export default () => ({
 export default (ALLOWANCE = 20) => ({
     handleData(aniObj, children) {
         return children
+>>>>>>> master
+=======
+export default () => ({
+    handleData(aniObj, children) {
+        return children;
 >>>>>>> master
     },
     touchstart() {},

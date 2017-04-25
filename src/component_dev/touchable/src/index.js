@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Touchable from './touchable.js';
@@ -92,4 +93,11 @@ export default class Touchable extends Component {
         return React.cloneElement(onlyChild, { onTouchStart, onTouchMove, onTouchEnd, onTouchCancel });
     }
 }
+>>>>>>> master
+=======
+import '../../common/tapEventPluginInit';
+import './style.scss';
+import Touchable from './touchable.js';
+
+export default Touchable;
 >>>>>>> master

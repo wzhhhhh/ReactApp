@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Picker from './picker';
@@ -21,8 +22,13 @@ import React, { Component, PropTypes } from 'react';
 import Scroller from '../../scroller/src';
 import PickerItem from './PickerItem';
 import classNames from 'classnames';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import Picker from './picker';
 
+<<<<<<< HEAD
 const SIZE = 1000000;
 const ITEM_HEIGHT = 30;
 
@@ -332,4 +338,7 @@ export default class Picker extends Component {
         );
     }
 }
+>>>>>>> master
+=======
+export default Picker;
 >>>>>>> master

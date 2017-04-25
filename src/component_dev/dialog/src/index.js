@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit.js';
 import './style.scss';
 import Dialog from './dialog';
@@ -21,8 +22,13 @@ import React, { Component, PropTypes } from 'react';
 import Modal from '../../modal/src';
 import Touchable from '../../touchable/src';
 import classNames from 'classnames';
+=======
+import '../../common/tapEventPluginInit.js';
+>>>>>>> master
 import './style.scss';
+import Dialog from './dialog';
 
+<<<<<<< HEAD
 const defaultProps = {
     show: false,
     animation: 'fade',
@@ -204,4 +210,7 @@ export default class Dialog extends Component {
 
 Dialog.defaultProps = defaultProps;
 Dialog.propTypes = propTypes;
+>>>>>>> master
+=======
+export default Dialog;
 >>>>>>> master

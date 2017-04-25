@@ -1,5 +1,8 @@
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
  * 加载中组件
  * @component loading
  * @type {Object}
@@ -7,6 +10,7 @@
  * @description 加载中组件。
  *
  * @instructions {instruInfo: ./loading.md}{instruUrl: loading.html?hideIcon}
+<<<<<<< HEAD
  */
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
@@ -21,6 +25,11 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import './style.scss';
+>>>>>>> master
+=======
+ */
+import React, { Component, PropTypes } from 'react';
+import classNames from 'classnames';
 >>>>>>> master
 
 const propTypes = {

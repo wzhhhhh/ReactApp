@@ -3,8 +3,11 @@
  */
 import React, { Component, PropTypes } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import '../../common/tapEventPluginInit';
+>>>>>>> master
+=======
 >>>>>>> master
 
 export default class extends Component {

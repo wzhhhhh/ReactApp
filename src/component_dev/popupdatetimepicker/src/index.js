@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import PopupDateTimePicker from './popupdatetimepicker';
@@ -327,6 +328,11 @@ class PopupDateTimePicker extends Component {
 
 PopupDateTimePicker.propTypes = propTypes;
 PopupDateTimePicker.defaultProps = defaultProps;
+>>>>>>> master
+=======
+import '../../common/tapEventPluginInit';
+import './style.scss';
+import PopupDateTimePicker from './popupdatetimepicker';
 >>>>>>> master
 
 export default PopupDateTimePicker;

@@ -4,14 +4,19 @@
 
 
 @import './usage/core/reset';
+//分类主页面
+@import './usage/module/classify/Header';
+@import './usage/module/classify/classify';
+
 
 @import './usage/module/home/test.scss';
 
 @import './usage/module/classify/classify';
 
 // 分类列表
-//@import './usage/module/classify/classifylist/classifylist';
-//@import './usage/module/classify/classifylist/classifytopic';
+@import './usage/module/classify/Header';
+@import './usage/module/classify/classifylist/classifylist';
+@import './usage/module/classify/classifylist/classifytopic';
 
 //视野主页面
 @import './usage/module/eye/eyeShot';
@@ -41,4 +46,5 @@ body{
 		height:100%;
 	}
 }
+
 

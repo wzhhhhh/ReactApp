@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit.js';
 import './style.scss';
 import DateTimePicker from './datetimepicker';
@@ -19,8 +20,13 @@ import Picker from '../../picker/src';
 import DateTimeCore from './datetimecore';
 import { getArrayByLength } from '../../common/util';
 import classNames from 'classnames';
+=======
+import '../../common/tapEventPluginInit.js';
+>>>>>>> master
 import './style.scss';
+import DateTimePicker from './datetimepicker';
 
+<<<<<<< HEAD
 const propTypes = {
     /**
      * 容器高度
@@ -219,4 +225,7 @@ export default class DateTimePicker extends Component {
 
 DateTimePicker.propTypes = propTypes;
 DateTimePicker.defaultProps = DateTimePickerDefaultProps;
+>>>>>>> master
+=======
+export default DateTimePicker;
 >>>>>>> master

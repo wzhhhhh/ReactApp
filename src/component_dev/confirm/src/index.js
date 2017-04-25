@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit.js';
 import './style.scss';
 import Confirm from './confirm.js';
@@ -119,4 +120,11 @@ export default function Confirm(content = '',
         });
     });
 }
+>>>>>>> master
+=======
+import '../../common/tapEventPluginInit.js';
+import './style.scss';
+import Confirm from './confirm.js';
+
+export default Confirm;
 >>>>>>> master

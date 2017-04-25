@@ -8,16 +8,16 @@ import HomeActivity from './module/activity'
 
 
 
-
 export default class Home extends Component {
 	constructor(props){
 		super(props)
 		this.state={
-			banner:[],
+			banner:[<div/>],
 			navpic:[],
 			viewtitle:[],
 			activity:[]
 		}
+		
 	}
   	render(){
    		return (

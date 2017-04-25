@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import Modal from './modal';
@@ -15,8 +16,13 @@ import React, { Component, PropTypes } from 'react';
 import ReactDom from 'react-dom';
 import RealModal from './modal';
 import './style.scss';
+=======
+>>>>>>> master
 import '../../common/tapEventPluginInit';
+import './style.scss';
+import Modal from './modal';
 
+<<<<<<< HEAD
 /**
  * 这个虚拟的组件将会利用renderSubtreeIntoContainer将Modal从原有的位置移动到body中
  */
@@ -54,4 +60,7 @@ export default class extends Component {
         return null;
     }
 }
+>>>>>>> master
+=======
+export default Modal;
 >>>>>>> master

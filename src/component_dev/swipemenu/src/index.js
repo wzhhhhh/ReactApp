@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '../../common/tapEventPluginInit';
 import './style.scss';
 import SwipeMenu from './swipemenu';
@@ -22,8 +23,13 @@ import '../../common/tapEventPluginInit.js';
 import Drag, { setTransform } from './drag.js';
 import React, { Component, PropTypes, isValidElement } from 'react';
 import classNames from 'classnames';
+=======
+import '../../common/tapEventPluginInit';
+>>>>>>> master
 import './style.scss';
+import SwipeMenu from './swipemenu';
 
+<<<<<<< HEAD
 const defaultProps = {
     action: [],
     direction: 'left',
@@ -331,4 +337,7 @@ export default class SwipeMenu extends Component {
 
 SwipeMenu.defaultProps = defaultProps;
 SwipeMenu.propTypes = propTypes;
+>>>>>>> master
+=======
+export default SwipeMenu;
 >>>>>>> master
