@@ -1,11 +1,11 @@
 import React,{Component} from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 
 import LoginHeader from './loginHeader'
 import LoginList from './loginList'
 import LoginPage from './loginPage'
 import OnloginHeader from '../onlogin/onlogin'
-import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
+// import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 
 export default class Loginall extends Component {
@@ -20,10 +20,10 @@ export default class Loginall extends Component {
 	}
 }
 
-ReactDOM.render((
-	<Router history={hashHistory}>
-		<Route path="/onlogin" component={OnloginHeader}>
+// ReactDOM.render((
+// 	<Router history={hashHistory}>
+// 		<Route path="/onlogin" component={OnloginHeader}>
 			
-		</Route>
-	</Router>	
-	),(document.getElementById('loginall')))
+// 		</Route>
+// 	</Router>	
+// 	),(document.getElementById('loginall')))
