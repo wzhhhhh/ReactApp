@@ -30,16 +30,16 @@ export default class DetailMain extends React.Component {
 		)
 	}
 	componentDidMount(){
-		// fetch(`api/productInfo/${this.props.params.id}`)
-		fetch('api/productInfo/1344')
+		fetch(`api/productInfo/${this.props.params.id}`)
+		// fetch('api/productInfo/1344')
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
 					productInfo: res.goods
 				})
 			})
-		// fetch(`api/productModel/${this.props.params.id}`)
-		fetch('api/productModel/1344')
+		fetch(`api/productModel/${this.props.params.id}`)
+		// fetch('api/productModel/1344')
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
