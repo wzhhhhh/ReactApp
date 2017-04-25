@@ -1,30 +1,22 @@
-
 @charset "UTF-8";
-
-
-
 @import './usage/core/reset';
-//分类主页面
 @import './usage/module/classify/Header';
 @import './usage/module/classify/Classify';
 @import './usage/module/classify/ClassList';
+@import './usage/module/home/search';
+@import './usage/module/home/test';
 @import './usage/module/eye/eyeShot';
-@import './usage/module/home/test.scss';
-
-@import "./usage/core/reset";
-
 @import "./usage/module/common/common";
-
 @import "./usage/module/car/index";
+@import "./usage/module/mine/common";
+@import "./usage/module/mine/leftPersonal";
+@import "./usage/module/mine/login";
 
 #root {
 	height: 100%;
 }
 
-@import "./usage/core/reset";
-@import "./usage/module/mine/common";
-@import "./usage/module/mine/leftPersonal";
-@import "./usage/module/mine/login";
+
 body{
 	height: 100%;
 	width: 100%;
