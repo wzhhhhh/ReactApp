@@ -37,16 +37,16 @@ ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/" component={Index}>
 			<IndexRedirect to="/home" />
-			<route path="home" component={Home}/>
-			<route path="classify" component={Classify}/>
-			<route path="eyeShot" component={EyeShot}/>
-			<route path="cart" component={CartIndex}/>
-			<route path="mine" component={Login}/>
+			<Route path="home" component={Home}/>
+			<Route path="classify" component={Classify}/>
+			<Route path="eyeShot" component={EyeShot}/>
+			<Route path="cart" component={CartIndex}/>
+			<Route path="mine" component={Login}/>
 		</Route>
-			<route path="onlogin" component={OnloginHeader}/>
-			<route path="dingdan" component={Dingdan}/>
-			<route path="zuji" component={Zuji}/>
-			<route path="youhui" component={Youhui}/>
+			<Route path="onlogin" component={OnloginHeader}/>
+			<Route path="dingdan" component={Dingdan}/>
+			<Route path="zuji" component={Zuji}/>
+			<Route path="youhui" component={Youhui}/>
 	</Router>	
 
 	),(document.getElementById('root')))
