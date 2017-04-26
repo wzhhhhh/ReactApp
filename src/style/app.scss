@@ -11,12 +11,12 @@
 @import "./usage/module/mine/common";
 @import "./usage/module/mine/leftPersonal";
 @import "./usage/module/mine/login";
-
+@import "./usage/module/mine/onlogin";
+@import "./usage/module/mine/dingdan";
+@import "./usage/module/mine/zuji";
 #root {
 	height: 100%;
 }
-
-
 body{
 	height: 100%;
 	width: 100%;
@@ -25,7 +25,10 @@ body{
 #root{
 	height: 100%;
 	.ce{
+		@include flex();
 		height:100%;
+		width: 100%;
+		overflow:hidden;
 	}
 }
 

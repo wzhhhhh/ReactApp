@@ -1,12 +1,9 @@
-
 require('../style/app.scss');
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
 import Index from './components/Index'
 import Home from './components/home/component'
-
 import Banner from './components/home/module/banner'
 import Classify from './components/classify/classify'
 import ClassList from './components/classify/ClassList'
@@ -16,9 +13,10 @@ import Login from './components/mine/login'
 import Detail from './components/car/DetailIndex'
 import DetailGoodsShow from './components/car/DetailGoodsShow'
 import Search from  './components/home/search'
-
-
-
+import OnloginHeader from './components/mine/onlogin/onlogin'
+import Dingdan from './components/mine/dingdan/dingdan'
+import Zuji from './components/mine/zuji/zuji'
+import Youhui from './components/mine/youhuiquan/youhuiquan'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render((
@@ -35,5 +33,10 @@ ReactDOM.render((
 		<Route path="/detail/:id" component={Detail}/>
 		<Route path="detailGoodsShow/:id" component={DetailGoodsShow}/>
 		<Route path="classList/:id" component={ClassList}/>
+		<Route path="onlogin" component={OnloginHeader}/>
+		<Route path="dingdan" component={Dingdan}/>
+		<Route path="zuji" component={Zuji}/>
+		<Route path="youhui" component={Youhui}/>
 	</Router>	
-),(document.getElementById('root')))
+
+	),(document.getElementById('root')))

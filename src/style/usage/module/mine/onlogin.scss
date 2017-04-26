@@ -1,0 +1,111 @@
+.onlogin{
+	width: 100%;
+	height:100%;
+	.onloginheader{
+		height: .44rem;
+		padding:.11rem .15rem;
+		background-color: #000;
+		@include flexbox();
+		li{
+			font-size: .16rem;
+			color: #fff;
+			img{
+				width: .22rem;
+				height:.22rem;
+			}
+		}
+		.otu{
+			width:.84rem;
+			height:.22rem; 
+		}
+		.owang{
+			width: .84rem;
+			height:.17rem;
+			text-align:right;
+		}
+		.odeng{
+			@include flex();
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.oin{
+		.oxuan{
+			@include flexbox();
+			@include border(0 0 1px 0,#ebebeb,solid);
+			height:.5rem;
+			padding: .17rem;
+			span{
+				@include flex();
+				width:100%;
+				text-align: center;
+			}
+			.ohuan{
+				color: #ffbd1f;
+			}
+		}
+		.odengl{
+			text-align: center;
+			input{
+				border:1px #ccc solid;
+
+				@include border(1px,#f00,solid);
+				
+				width: 94%;
+				height:.45rem;
+				padding:.1rem;
+				border-radius: .03rem;
+				margin:.1rem;
+			}
+			.in{
+				background-color:#ffbd1f; 
+				color:#fff;
+				font-weight: 600;
+			}
+		}
+		.ohua{
+			text-align: center;
+			padding-bottom:.18rem;
+			p{
+				font-size: .16rem;
+				span{
+					font-size: .17rem;
+					color:#ffbd1f;
+				}
+			}
+			span{
+				color:#00f;
+			}
+		}
+		.oshejiao{
+			i{
+				font-size: .12rem;
+				display: block;
+				padding-bottom: .18rem;
+				text-align: center;
+				color: #e2e2e2;
+			}
+			.osj{
+				@include flexbox();
+				padding:0 .55rem;
+				justify-content: space-around;
+				img{
+					width: .44rem;
+					height:.44rem;
+				
+				}
+				
+			}
+		}
+	}
+	.yquan{
+		width: 94%;
+		height: 1.83rem;
+		margin:.23rem auto;
+		img{
+			width: 100%;
+			height: 100%;
+			@include border(1px,#000,solid);
+		}
+	}
+}
