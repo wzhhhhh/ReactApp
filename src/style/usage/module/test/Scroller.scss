@@ -1,0 +1,11 @@
+.m-box{
+	height: 100%;
+	.yo-scroller{
+		@include flex();
+		width: 100%;
+		img {
+			height: 250px;
+			width: 100%;
+		}
+	}
+}

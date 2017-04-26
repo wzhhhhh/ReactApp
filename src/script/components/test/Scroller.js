@@ -10,12 +10,26 @@ export default class Scroll extends React.Component{
 	}
 	render(){
 		let imgs = this.state.goods.map((item)=>{
-			return <img src={item.goods_img} alt=""/>
+			return <img src={item.list_img} alt=""/>
 		})
+		console.log(imgs)
 		return(
 			<Scroller
-			    scrollX={true}
-			    scrollY={false}
+			    scrollX={false}
+			    scrollY={true}
+			    ref="scroller"
+			    usePullRefresh={true}
+			    onRefresh={()=>{
+			    	console.log(111)
+			    	fetch('api/homeData?page=2&size=1')
+					.then((response)=>response.json())
+					.then((res)=>{
+						this.setState({
+							goods: res.list.goods.concat(this.state.goods)
+						})
+						this.refs.scroller.stopRefreshing(true);
+					})
+			    }}
 			>
 			    <div>{imgs}</div>
 			</Scroller>	
@@ -27,7 +41,7 @@ export default class Scroll extends React.Component{
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
-					list: res.list.goods
+					goods: res.list.goods
 				})
 			})
 	}
