@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 //DetailIndex
-.Index {
+#root {
 	height: 100%;
 	width: 100%;
 	.DetailIndex {
@@ -295,14 +295,13 @@
 
 //CartIndex
 @import '../../fragment/yo-header';
-// @include yo-header(
-// 	$name: cartHeader,
-// 	$bgcolor: #090909,
-// 	$color: #fff,
-// 	$font-size: .2rem,
-// 	$item-font-size: .16rem,
-// 	$item-space: .1rem
-// ){}
+@include yo-header(
+	$name: c,
+	$bgcolor: #090909
+	
+){
+	color: #fff;
+}
 
 .m-box{
 	@include flexbox();
@@ -313,12 +312,18 @@
 		@include flexbox();
 		@include flex-direction(column);
 		width: 100%;
-		.yo-header-cartHeader {
-			height: .5rem;
-			width: 100%;
-		}
+		// .yo-header-cartHeader{
+		// 	height: .5rem;
+		// 	h1 {
+		// 		color: #fff;
+		// 	}
+		// 	span {
+		// 		color: #fff;
+		// 	}
+		// }
 		.cartList {
 			@include flex();
+			width: 100%;
 			padding: 0 .1rem;
 		}
 		.cartCount {

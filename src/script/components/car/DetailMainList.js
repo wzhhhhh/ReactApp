@@ -2,7 +2,6 @@ import React from 'react'
 
 export default class DetailMainList extends React.Component {
 	render(){
-		console.log(this.props.goodsListInfo.goods_id)
 		return (
 			<div className="DetailMainList">
 				<img src={this.props.goodsListInfo.detail_img} alt="" />

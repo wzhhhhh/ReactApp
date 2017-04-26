@@ -4,7 +4,7 @@ export default class DetailGoodsShow extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			imgList: []
+			imgList: [<div />]
 		}
 	}
 	render(){
@@ -16,9 +16,10 @@ export default class DetailGoodsShow extends React.Component {
 		)
 	}
 	componentDidMount(){
-		fetch('api/productDetailImage/1343')
+		fetch(`api/productDetailImage/${this.props.params.id}`)
 			.then((response)=>response.json())
 			.then((res)=>{
+				console.log(res)
 				this.setState({
 					imgList: res.image
 				})

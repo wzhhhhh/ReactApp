@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default class DetailMainList extends React.Component {
+	goToDetailShow(id){
+		this.props.onGoToDetailShow(id);
+	}
 	render(){
 		return (
 			<div className="DetailMainFooter">
@@ -12,7 +15,7 @@ export default class DetailMainList extends React.Component {
 					<div className="say">
 						<img src="./images/product_comment.png" alt=""/>
 					</div>
-					<div className="infoMore">查看详情</div>
+					<div onClick={this.goToDetailShow.bind(this,this.props.goodsFooterInfo.goods_id)} className="infoMore">查看详情</div>
 					<div className="pay">立即购买</div>
 					<div className="addCar">加入购物车</div>
 				</div>

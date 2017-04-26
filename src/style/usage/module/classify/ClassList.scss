@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@import './usage/module/classify/classifylist/classHeader';
+@import './usage/module/classify/classifylist/classifylist';
+@import './usage/module/classify/classifylist/classifytopic';
+
+.classList{
+	height: 100%;
+	width: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+}

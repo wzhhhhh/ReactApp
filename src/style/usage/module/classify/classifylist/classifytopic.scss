@@ -1,9 +1,42 @@
 .prilist{
 	width: 100%;
 	height: .47rem;
-	overflow: hidden;
+	position: relative;
 	.topic{
+		width:100%;
 		@include flexbox();
 		@include justify-content(space-between);
+		p,i{
+			margin: .15rem;
+			font-size: .15rem;
+			color: #000;
+		}
+	}
+	.pricelist{
+		display: none;
+		width: 100%;
+		position: absolute;
+		top: .47rem;
+		background: #e6e6e6;
+		li{
+			line-height: .485rem;
+			height: .485rem;
+			font-size: .15rem;
+			margin: 0 .15rem;
+			@include border(0 0 1px 0,#d6d6d6,solid);
+			input{
+				width: .71rem;
+				height: .31rem;
+				margin: 0 .09rem;
+			}
+			input:last-child{
+				width: .55rem;
+				height: .31rem;
+				border-radius: .1rem;
+				background: #fdbf14;
+				color: #000;
+				line-height: 0;
+			}
+		}
 	}
 }

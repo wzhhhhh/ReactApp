@@ -1,0 +1,26 @@
+.classheader{
+	width: 100%;
+	height: .47rem;
+	@include flexbox();
+	background: #000;
+	.back{
+		display: block;
+		margin: .15rem;
+		height: .22rem;
+		width: .22rem;
+		background: url(http://m.miaohui.com/static/src/img/header_back.png);
+		background-size: .22rem;
+	}
+	h1{
+		@include flex();
+		color: #fff;
+		text-align: center;
+		line-height: .47rem;
+		font-size: .185rem;
+		font-weight: normal;
+	}
+	.list{
+		color: #fff;
+		margin: .15rem;
+	}
+}
