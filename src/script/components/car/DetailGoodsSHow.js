@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Carousel from '../../../component_dev/carousel/src';
 export default class DetailGoodsShow extends React.Component {
 	constructor(props){
 		super(props)
@@ -8,11 +8,11 @@ export default class DetailGoodsShow extends React.Component {
 		}
 	}
 	render(){
-		let imgs = this.state.imgList.map((item)=>{return <img src={item.img_url} alt=""/>})
+		let imgs = this.state.imgList.map((item)=>{return <li className="item"><img src={item.img_url} alt=""/></li>})
 		return (
-			<div className="DetailGoodsShow">
-				<div className="imgBox">{imgs}</div>
-			</div>
+			<Carousel extraClass="DetailGoodsShow" autoplay={false} dots={false}>
+				{imgs}
+			</Carousel>
 		)
 	}
 	componentDidMount(){
