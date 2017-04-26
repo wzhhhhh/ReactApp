@@ -7,12 +7,17 @@ class EyeShot extends React.Component{
 	      eyeShot: []
 	    }
 	}
+
+	goEyeView(article_id){
+        this.props.router.push(`/eyeView/${article_id}`)
+    }
+
 	render(){
 		let list = this.state.eyeShot.map((value)=>{return (
-               <div className="viewList">
-					<a href="#qqq">
+               <div onClick={this.goEyeView.bind(this,value.article_id)} className="viewList">
+					<div>
 						<img src={value.image_url} alt=""/>
-					</a>
+					</div>
 					<h2>{value.subtitle}</h2>
 				</div>
             )})

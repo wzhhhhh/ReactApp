@@ -1,0 +1,10 @@
+import React from "react"
+
+class EyeHeader extends React.Component{
+	render(){
+		return(
+			<div>EyeHeader</div>
+			)
+	}
+}
+export default EyeHeader
