@@ -295,12 +295,13 @@
 
 //CartIndex
 @import '../../fragment/yo-header';
-// @include yo-header(
-// 	$name: c,
-// 	$bgcolor: #090909,
-// 	$item-color: #fff,
-// 	$color: #fff
-// ){}
+@include yo-header(
+	$name: c,
+	$bgcolor: #090909
+	
+){
+	color: #fff;
+}
 
 .m-box{
 	@include flexbox();
