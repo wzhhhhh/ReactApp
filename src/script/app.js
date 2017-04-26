@@ -17,6 +17,7 @@ import OnloginHeader from './components/mine/onlogin/onlogin'
 import Dingdan from './components/mine/dingdan/dingdan'
 import Zuji from './components/mine/zuji/zuji'
 import Youhui from './components/mine/youhuiquan/youhuiquan'
+import Scroller from './components/test/Scroller'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render((
@@ -28,6 +29,7 @@ ReactDOM.render((
 			<Route path="eyeShot" component={EyeShot}/>
 			<Route path="cart" component={CartIndex}/>
 			<Route path="mine" component={Login}/>
+			<Route path="scroll" component={Scroller}/>
 		</Route>
 		<Route path="/search" component={Search} />
 		<Route path="/detail/:id" component={Detail}/>
@@ -37,6 +39,7 @@ ReactDOM.render((
 		<Route path="dingdan" component={Dingdan}/>
 		<Route path="zuji" component={Zuji}/>
 		<Route path="youhui" component={Youhui}/>
+
 	</Router>	
 
 	),(document.getElementById('root')))
