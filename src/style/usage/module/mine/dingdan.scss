@@ -1,0 +1,50 @@
+.ding{
+	.dingheader{
+		height:.44rem;
+		padding:.11rem .15rem;
+		background: #000;
+		@include flexbox();
+		li{
+			font-size: .16rem;
+			color: #fff;
+			img{
+				width: .22rem;
+				height:.22rem;
+			}
+		}
+		.otu{
+			width:.22rem;
+			height:.22rem;
+		}
+		.oding{
+			@include flex();
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.dan{
+		width: 94%;
+		height:.36rem;
+		border:1px #232323 solid;
+		/*@include border(2px,#232323,solid);*/
+		border-radius: .08rem;
+		margin:0 auto;
+		margin-top:.11rem;
+		@include flexbox();
+		li{
+			@include flex();
+			text-align: center;
+			height: .34rem;
+			line-height: .34rem;
+			
+		}
+		.li{
+			@include border( 0 2px,#232323,solid);
+		}
+		.active{
+			color: #fff;
+			background-color: #232323; 
+		}
+	}
+}
+

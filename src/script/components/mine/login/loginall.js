@@ -6,6 +6,8 @@ import LoginPage from './loginPage'
 import OnloginHeader from '../onlogin/onlogin'
 
 export default class Loginall extends Component {
+
+	
 	render (){
 		return(
 			<div className="loginall" id="loginall">

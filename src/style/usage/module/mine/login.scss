@@ -1,19 +1,24 @@
 .loginall{
-		@include flex();
 		position:relative;
 		width: 100%;
 		.loginheader{
-			padding:.1rem .16rem .1rem;
+
+			padding:.1rem .15rem .1rem;
 			background-color: #ffbd1f;
+			width: 100%;
 			@include flexbox();
-			justify-content: space-between;
+			
 			.lxkf{
+				overflow: hidden;
 				font-size: .14rem;
 				margin-left:.14rem;
 				margin-top: .1rem;
 				
 			}
 			.lzhong{
+				@include flex();
+				width: 100%;
+				height: 100%;
 				li:not(.ltu){
 					margin-top:.15rem;
 					text-align: center;
@@ -30,18 +35,21 @@
 				.lhuise{
 					color:#555;
 				}
+				.ldian{
+					color:#333;
+				}
 				
 			}
 			.lshezhi{
-				/*position: absolute;
-				right:.16rem;*/
-				width: .35rem;
-				height:.35rem;
+					width: .35rem;
+					height: .35rem;
+					img{
+						width: 100%;
+						height:100%;
+					}
+				
 			
-				img{
-					width: 100%;
-					height:100%;
-				}
+				
 			}
 		}
 
@@ -61,6 +69,9 @@
 				span{
 						margin-top: .02rem;
 						font-size: .12rem;
+						.ldian{
+							color:#b2b2b2;
+						}
 					}
 				
 			}
@@ -72,14 +83,14 @@
 				@include border(0 0 1px 0,#eaeaea,solid);
 				li{
 					width: .86rem;
-					height:.77rem;
+					height:.7rem;
 					/*margin:.12rem;*/
 					font-size:.12rem;
 					text-align: center;
 					span{
 						display: block;
 						margin-bottom: .20rem;
-						font-size: .18rem;
+						font-size: .16rem;
 						color:#ffba16;
 						font-weight: 300;
 					}
@@ -89,17 +100,23 @@
 					}
 					
 				}
+				.lli{
+					@include flex();
+					width: 100%;
+				}
 			}
 
 		}
 		.llistpage{
+				
 				margin-top: .1rem;
 				@include border(1px 0 0 0,#f4f4f4,solid);
 				background-color:#fff; 
-				
+				width: 100%;
 				ul{
-					@include border( 0 0 1px 0,#ebebeb,solid)
+					@include border( 0 0 1px 0,#ebebeb,solid);
 					li{
+						width: 100%;
 						padding:.12rem;
 						font-size: .14rem;
 						img{
@@ -107,8 +124,12 @@
 							height: .18rem;
 						}
 					}
+					.ldian{
+					color:#212121;
+					}
 					.lpage{
-						@include border(0 0 1px 0,#ebebeb,solid)
+						@include border(0 0 1px 0,#ebebeb,solid);
+						height: .5rem;
 					}
 				}
 			}

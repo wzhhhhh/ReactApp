@@ -4,15 +4,7 @@
 import React, { Component, PropTypes } from 'react';
 import { DELAY_TIME_FOR_INFINITE_WITHOUT_HEIGHT } from '../../common/util';
 import classNames from 'classnames';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Touchable from '../../touchable/src/touchable';
-=======
-import Touchable from '../../touchable/src';
->>>>>>> master
-=======
-import Touchable from '../../touchable/src/touchable';
->>>>>>> master
 
 export default class extends Component {
 

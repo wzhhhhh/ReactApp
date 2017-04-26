@@ -3,16 +3,17 @@ require('../style/app.scss');
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
 import Index from './components/Index'
 import Home from './components/home/component'
-
 import Banner from './components/home/module/banner'
 import Classify from './components/classify/classify'
 import EyeShot from './components/eye/eyeShot'
 import CartIndex from './components/car/CartIndex'
 import Login from './components/mine/login'
-
+import OnloginHeader from './components/mine/onlogin/onlogin'
+import Dingdan from './components/mine/dingdan/dingdan'
+import Zuji from './components/mine/zuji/zuji'
+import Youhui from './components/mine/youhuiquan/youhuiquan'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 // <<<<<<< HEAD
@@ -42,12 +43,13 @@ ReactDOM.render((
 			<route path="cart" component={CartIndex}/>
 			<route path="mine" component={Login}/>
 		</Route>
-			{/*<route path="mine/onlogin" component={OnloginHeader}>*/}
+			<route path="onlogin" component={OnloginHeader}/>
+			<route path="dingdan" component={Dingdan}/>
+			<route path="zuji" component={Zuji}/>
+			<route path="youhui" component={Youhui}/>
 	</Router>	
-	),(document.getElementById('root')))
-// <<<<<<< HEAD
 
-// 	),(document.getElementById('root')))
+	),(document.getElementById('root')))
 
 
 //分类列表页
@@ -94,7 +96,4 @@ ReactDOM.render((
 // // >>>>>>> master
 // =======
 // 	),(document.getElementById('root')))
-// >>>>>>> master
-// =======
-
 // >>>>>>> master
