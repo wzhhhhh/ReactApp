@@ -7,7 +7,8 @@
 @import './usage/module/home/test';
 @import './usage/module/eye/eyeShot';
 @import "./usage/module/common/common";
-@import "./usage/module/car/index";
+@import "./usage/module/car/indexDetail";
+@import "./usage/module/car/indexCart";
 @import "./usage/module/mine/common";
 @import "./usage/module/mine/leftPersonal";
 @import "./usage/module/mine/login";
@@ -31,3 +32,5 @@ body{
 		overflow:hidden;
 	}
 }
+
+

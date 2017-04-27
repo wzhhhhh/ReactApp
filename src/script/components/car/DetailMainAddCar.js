@@ -1,6 +1,15 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router'
+import InputNumber from '../../../Component_dev/inputnumber/src';
+
 
 export default class DetailMainList extends React.Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			buyNumber: 1
+		}
+	}
 	render(){
 		let lis = this.props.goodsAddCarList.map((item)=>{
 			return <span>{item.show_attr}</span>
@@ -17,7 +26,7 @@ export default class DetailMainList extends React.Component {
 					</dl>
 				</dl>
 				<div className="goodsChoose">
-					<span className="chooseTitle">样式分类</span>
+					{lis.length > 0 ? <span className="chooseTitle">样式分类</span> : ''}
 					<ul className="chooses">
 						{lis}
 					</ul>
@@ -25,11 +34,11 @@ export default class DetailMainList extends React.Component {
 				<div className="goodsCount">
 					<div className="countNumber">
 						<span className="number">购买数量</span>
-						<div className="numberBox">
-							<input type="button" className="decrease" value="-"/>
-							<input type="text" value="1" className="showNumber"/>
-							<input type="button" className="increase" value="+"/>
-						</div>
+						<InputNumber
+						    value={this.state.buyNumber}
+    						onChange={buyNumber => this.setState({buyNumber})}
+    						min={1}   
+						/>
 					</div>
 					<div className="countPrice">
 						<span className="priceAll">商品总价</span>
@@ -39,7 +48,7 @@ export default class DetailMainList extends React.Component {
 						</div>
 					</div>
 				</div>
-				<a href="" className="sure">确定</a>
+				<a className="sure">确定</a>
 			</div>
 		)
 	}
