@@ -35,15 +35,16 @@ class Classifylist extends React.Component{
 					ref="list"
 					dataSource={this.state.List}
 				    renderItem={(value,i)=>{
-				        return (
-			                <li onClick={this.gotoDetail.bind(this,value.goods_id)}>
-								<img src={value.list_img} alt=""/>
-								<p>{value.goods_name}</p>
-								<b>{`￥${value.miaohui_price}`}</b>
-							</li>
-			            )
-				    }}
-				
+				    	if (!this.isEmptyObject(value)) {
+					        return (
+				                <li onClick={this.gotoDetail.bind(this,value.goods_id)}>
+									<img src={value.list_img} alt=""/>
+									<p>{value.goods_name}</p>
+									<b>{`￥${value.miaohui_price}`}</b>
+								</li>
+				            )
+					    }
+				    }}				
 					usePullRefresh={true}
 					onRefresh={() => {
 				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
@@ -55,15 +56,19 @@ class Classifylist extends React.Component{
 			    		})
 				        this.refs.list.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
 				    }}
-
 				    useLoadMore={true}
 				    onLoad={() => {
 				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
 			    		.then((response)=>response.json())
-			    		.then((res)=>{
-			    			this.setState({
-			    				List:this.state.List.concat(res.list.goods)
-			    			})
+			    		.then((res)=>{		    		
+		    				if (res.list.goods.length > 0) {
+		    					this.setState({
+			                      List:this.state.List.concat(res.list.goods)
+			                    })			       
+		                    	this.refs.list.stopLoading(true);
+		                   	}else{
+		                    this.refs.list.resetLoadStatus(false);
+		                   	}				    							    			
 			    		})
 				        this.refs.list.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
 				    }}
