@@ -81,7 +81,7 @@ module.exports = {
 	externals: {
 	    'react': 'window.React',
 	    'react-dom': 'window.ReactDOM',
-	    'react-router': 'window.ReactRouter'
+	    'react-router': 'window.ReactRouter',
 	    'redux': 'window.Redux',
     	'react-redux': 'window.ReactRedux'
   }

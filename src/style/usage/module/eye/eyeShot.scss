@@ -23,24 +23,35 @@
 		height: .52rem;	
 		position: relative;	
 		.nav{
+			width: 100%;
 			// display: none;
 			position: relative;
 			background: #eee;
 			height: .52rem;
 			padding-right: .5rem;
-    		overflow: hidden;
-			a{
-				padding: .175rem 0; 
-				margin: 0 .15rem;
-				color: #666;
-				font-size: .15rem;
-				line-height: .5rem;
-				height: .5rem;
-			}
-			.active{
-				line-height: .5rem;
-				height: .5rem;
-				@include border(0 0 0.02rem 0,#ffa000,solid)
+    		// overflow: hidden;
+			.yo-scroller{
+				width: 100%;
+				@include flexbox();
+				.scroller{
+					// width: auto;
+					@include flexbox();
+					a{
+						@include flex();
+						width: .45rem !important;
+						margin: 0 .15rem;
+						color: #666;
+						text-align: center;
+						font-size: .15rem;
+						line-height: .5rem;
+						height: .5rem;
+					}
+					.active{
+						line-height: .5rem;
+						height: .5rem;
+						@include border(0 0 0.02rem 0,#ffa000,solid)
+					}					
+				}
 			}
 			.navmore{
 				position: absolute;
