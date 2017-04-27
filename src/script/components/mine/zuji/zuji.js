@@ -24,7 +24,6 @@ export default class Zuji extends React.Component {
 							<span>旅行包</span>
 							<span className="zyan">￥86.70</span>
 						</div>
-						
 					</li>
 				</ul>
 
