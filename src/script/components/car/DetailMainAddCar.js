@@ -44,7 +44,7 @@ export default class DetailMainList extends React.Component {
 						<span className="priceAll">商品总价</span>
 						<div className="priceBox">
 							<span className="count">￥188</span>
-							<span className="choose">购买数量购买数量购买数量购买数量</span>
+							<span className="choose">购买数量购买数量</span>
 						</div>
 					</div>
 				</div>
