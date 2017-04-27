@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import Loading,{loading} from '../../../component_dev/Loading/src'
 import Scroler from '../../../component_dev/scroller/src';
-
+import Link from "react-router";
 
 import Banner from './module/banner'
 import HomeNav from './module/nav'
