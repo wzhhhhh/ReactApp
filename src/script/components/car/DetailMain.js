@@ -9,20 +9,30 @@ export default class DetailMain extends React.Component {
 		super(props)
 		this.state = {
 			productInfo: {},
-			addCarList: []
+			addCarList: [],
+			IsShow: null
 		}
+	}
+	addCarShow(IsShow){
+		console.log(IsShow);
+		this.setState({
+			IsShow: IsShow
+		})
 	}
 	goToDetailShow(id){
 		this.props.lll(id);
 	}
 	render(){
+		let show = {
+			visibility: this.state.IsShow ? 'visible' : 'hidden'
+		}
 		return (
 			<div className="DetailMain">
 				<div className="container">
 					<DetailMainList goodsListInfo={this.state.productInfo}/>
-					<DetailMainFooter onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
+					<DetailMainFooter addCarIsShow={this.addCarShow.bind(this)} onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
 				</div>
-				<div className="modal">
+				<div className="modal" style={show}>
 					<div className="empty"></div>
 					<DetailMainAddCar goodsAddCarList={this.state.addCarList} goodsAddCarInfo={this.state.productInfo}/>
 				</div>

@@ -32,13 +32,13 @@ ReactDOM.render((
 		</Route>
 		<Route path="/search" component={Search} />
 		<Route path="/detail/:id" component={Detail}/>
-		<Route path="detailGoodsShow/:id" component={DetailGoodsShow}/>
-		<Route path="classList/:id" component={ClassList}/>
-		<Route path="eyeView/:id" component={EyeView}/>
-		<Route path="onlogin" component={OnloginHeader}/>
-		<Route path="dingdan" component={Dingdan}/>
-		<Route path="zuji" component={Zuji}/>
-		<Route path="youhui" component={Youhui}/>
+		<Route path="/detailGoodsShow/:id" component={DetailGoodsShow}/>
+		<Route path="/classList/:id" component={ClassList}/>
+		<Route path="/eyeView/:id" component={EyeView}/>
+		<Route path="/onlogin" component={OnloginHeader}/>
+		<Route path="/dingdan" component={Dingdan}/>
+		<Route path="/zuji" component={Zuji}/>
+		<Route path="/youhui" component={Youhui}/>
 	</Router>	
 
 	),(document.getElementById('root')))

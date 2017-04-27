@@ -1,7 +1,7 @@
 import React from "react"
-
+import List from "../../../../component_dev/list/src"
 import Loading, {loading} from '../../../../component_dev/loading/src'
-import List from '../../../../component_dev/list/src'
+
 
 
 class Classifylist extends React.Component{
