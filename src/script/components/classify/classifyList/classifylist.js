@@ -46,7 +46,7 @@ class Classifylist extends React.Component{
 				
 					usePullRefresh={true}
 					onRefresh={() => {
-				        fetch(`/api/getRecommendTipsGoodsList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
+				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
 			    		.then((response)=>response.json())
 			    		.then((res)=>{
 			    			this.setState({
@@ -58,7 +58,7 @@ class Classifylist extends React.Component{
 
 				    useLoadMore={true}
 				    onLoad={() => {
-				        fetch(`/api/getRecommendTipsGoodsList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
+				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
 			    		.then((response)=>response.json())
 			    		.then((res)=>{
 			    			this.setState({
