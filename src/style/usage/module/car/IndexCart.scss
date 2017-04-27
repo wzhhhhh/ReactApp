@@ -1,0 +1,40 @@
+//CartIndex
+@import '../../fragment/yo-header';
+@include yo-header(
+	$name: c,
+	$bgcolor: #090909
+	
+){
+	color: #fff;
+}
+
+.m-box{
+	@include flexbox();
+	@include flex-direction(column);
+	width: 100%;
+	.cartMain {
+		@include flex();
+		@include flexbox();
+		@include flex-direction(column);
+		width: 100%;
+		// .yo-header-cartHeader{
+		// 	height: .5rem;
+		// 	h1 {
+		// 		color: #fff;
+		// 	}
+		// 	span {
+		// 		color: #fff;
+		// 	}
+		// }
+		.cartList {
+			@include flex();
+			width: 100%;
+			padding: 0 .1rem;
+		}
+		.cartCount {
+			padding: .1rem;
+			height: .52rem;
+			width: 100%;
+		}
+	}
+}
