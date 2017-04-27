@@ -25,6 +25,8 @@
 		@include flex()
 		touch-action:none;
 		width:100%;
+			
+		
 		.home-content{
 			overflow-y:scroll;		
 			width:100%;
@@ -188,8 +190,9 @@
 			.home-list{
 				width:100%;
 				height:100%;
-				div{
+				>a{
 					width:100%;
+					height: 100%;
 					margin-bottom: .1rem;
 					img{
 						width:100%;
@@ -197,12 +200,18 @@
 					h5{
 						font-size: .14rem;
 						line-height: .28rem;
+						color:#000;
+						padding-left: .1rem;
 					}
 					p{
-						color::#FFBD1F
+						color::#FFBD1F;
+						padding-left: .1rem;
 					}
 				}
-			}	
+			}		
+		}
+		.yo-load{
+			margin-top:.47rem;
 		}
 	}	
 }

@@ -19,24 +19,29 @@ import Zuji from './components/mine/zuji/zuji'
 import Youhui from './components/mine/youhuiquan/youhuiquan'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
-ReactDOM.render((
-	<Router history={hashHistory}>
-		<Route path="/" component={Index}>
-			<IndexRedirect to="/home" />
-			<Route path="home" component={Home}/>
-			<Route path="classify" component={Classify}/>
-			<Route path="eyeShot" component={EyeShot}/>
-			<Route path="cart" component={CartIndex}/>
-			<Route path="mine" component={Login}/>
-		</Route>
-		<Route path="/search" component={Search} />
-		<Route path="/detail/:id" component={Detail}/>
-		<Route path="detailGoodsShow/:id" component={DetailGoodsShow}/>
-		<Route path="classList/:id" component={ClassList}/>
-		<Route path="onlogin" component={OnloginHeader}/>
-		<Route path="dingdan" component={Dingdan}/>
-		<Route path="zuji" component={Zuji}/>
-		<Route path="youhui" component={Youhui}/>
-	</Router>	
+import store from './store/store'
+import { Provider }  from 'react-redux'
 
+
+ReactDOM.render((
+	<Provider store={store().store}>
+		<Router history={hashHistory}>
+			<Route path="/" component={Index}>
+				<IndexRedirect to="/home" />
+				<Route path="home" component={Home}/>
+				<Route path="classify" title="哈哈" component={Classify}/>
+				<Route path="eyeShot" title="呀" component={EyeShot}/>
+				<Route path="cart" title="嘿嘿" component={CartIndex}/>
+				<Route path="mine" title="呦呼" component={Login}/>
+			</Route>
+			<Route path="/search" component={Search} />
+			<Route path="/detail/:id" component={Detail}/>
+			<Route path="/detailGoodsShow/:id" component={DetailGoodsShow}/>
+			<Route path="/classList/:id" component={ClassList}/>
+			<Route path="/onlogin" component={OnloginHeader}/>
+			<Route path="/dingdan" component={Dingdan}/>
+			<Route path="/zuji" component={Zuji}/>
+			<Route path="/youhui" component={Youhui}/>
+		</Router>	
+	</Provider>
 	),(document.getElementById('root')))
