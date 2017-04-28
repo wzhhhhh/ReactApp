@@ -51,27 +51,28 @@ export default class  LoginHeader extends React.Component {
 				{
 					
 					this.state.username ? (<ul className="lzhong">
-					<li className="ltu"><img src="./images/avatar.png" alt="" /></li>
+					<li className="ltu"><img src="http://m.miaohui.com/static/src/img/placeholder/touxiang.png" alt="" /></li>
 					<li><span>{this.state.username}</span><span className="m">M0</span></li>
 					<li className="lhuise"><span className="mq">0个秒钻</span><Link to="/youhui" className="ldian"><span className="mq">1张优惠券</span></Link></li>
 				</ul>) : (<ul className="lzhong">
-					<li className="ltu"><img src="./images/avatar.png" alt="" /></li>
+					<li className="ltu"><img src="http://m.miaohui.com/static/src/img/placeholder/touxiang.png" alt="" /></li>
 					<li><Link to="/onlogin" className="ldian">点击登录</Link></li>
 					<li className="lhuise" onClick = {()=>{this.setState({popupShow:true})}}>速来注册，获得全球创意</li>
 				</ul>)	
 				}
 				
 				
-				<div className="lshezhi"><img src="./images/profile_preference.png" alt="" /></div>
+				<div className="lshezhi"><img src="http://m.miaohui.com/static/src/img/my/setting.png" alt="" /></div>
 				<Popup 
 					ref = "registor"
 					show = {this.state.popupShow}
-					height="300"
+					height="260"
 					extraClass="regi"
 					>
+					<div><span>注册账号</span></div>
 					<div><input type="text" ref="username" placeholder="用户名" /></div>
 					<div><input type="password" ref="password" placeholder="密码" /></div>
-					<div><input type="button" value="提交" onClick={this.registor.bind(this)} /></div>
+					<div><input className="in" type="button" value="提交" onClick={this.registor.bind(this)} /></div>
 				</Popup>
 			</div>
 

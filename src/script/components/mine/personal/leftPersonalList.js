@@ -5,7 +5,7 @@ export default class LeftPersonalList extends Component {
 		return(
 			<div className="leftpolist">
 				<ul className="ul lshang">
-					<li><img src="./images/quanbu.png" alt="" /><span>全部订单</span></li>
+					<li><img src="http://m.miaohui.com/static/src/img/aside/qunbudingdan.png" alt="" /><span>全部订单</span></li>
 					<li><img src="./images/youhui.png" alt="" /><span>优惠券</span></li>
 					<li><img src="./images/xinyuan.png" alt="" /><span>我的心愿单</span></li>
 				</ul>

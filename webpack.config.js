@@ -13,7 +13,7 @@ module.exports = {
 	},
 	devServer:{
 		contentBase: './build',
-		host: '10.9.157.22',
+		host: 'localhost',
 		port: 8000,
 		proxy:{
 			'/api':{
