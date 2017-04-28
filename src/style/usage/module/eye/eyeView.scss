@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@import './usage/module/eye/eyeCommon/eyeHeader';
+@import './usage/module/eye/eyeCommon/eyeContent';
+@import './usage/module/eye/eyeCommon/eyeFooter';
+
+.eyeView{
+	width: 100%;
+	height: 100%;
+	@include flexbox();
+	@include flex-direction(column);
+}

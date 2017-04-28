@@ -13,11 +13,23 @@ class classHeader extends React.Component{
 	}
 
 	render(){
+		{//为了获取头部的名称
+			var arr = this.state.List.length
+			for(var i = 0 ;i < arr;i++){
+				var id = this.state.List[i].cat_id
+				var catID = this.props.getID
+				if(catID == id){
+					// console.log(name)
+					var name = this.state.List[i].cat_name
+				}
+			}
+		}
+		
 		
 		return(
             <div className="classheader">
             	<span onClick={this.back.bind(this)} className="back"></span>
-            	<h1>{this.state.List[this.props.getID] && this.state.List[this.props.getID].cat_name}</h1>
+            	<h1>{name}</h1>
             	<span className="yo-ico list">&#xf07e;</span>
             </div>
 		)

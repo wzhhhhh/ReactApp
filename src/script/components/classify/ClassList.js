@@ -12,6 +12,7 @@ class ClassList extends React.Component{
 	}
 	back() {
 	    this.props.router.goBack()
+	    console.log(this)
 	}
 	render(){
 		return(

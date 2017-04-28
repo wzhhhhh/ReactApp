@@ -2,6 +2,10 @@ import React from "react"
 import Header from "./Header"
 import {Link} from 'react-router'
 
+
+import Scroller from '../../../component_dev/scroller/src'
+
+
 class Classify extends React.Component{
 	constructor(props) {
 	    super(props)
@@ -24,23 +28,25 @@ class Classify extends React.Component{
         return(
             <div className="classbox">
                 <Header />
-                <div className="Classify">               
-                    <ul>
-                        {lis}
-                        <li>
-                            <img src="http://image.app.magicwe.com/images/201701/1483718889395978610.png" alt=""/>
-                            <h1>本期推荐</h1>
-                        </li>
-                         <li>
-                            <img src="http://image.app.magicwe.com/images/201609/1473674187842567614.png" alt=""/>
-                            <h1>3D展示</h1>
-                        </li>
-                         <li>
-                            <img src="http://image.app.magicwe.com/images/201609/1473674198371194517.png" alt=""/>
-                            <h1>全景展示</h1>
-                        </li>
-                    </ul> 
-                </div>
+                <Scroller ref="scroller" >
+                    <div className="Classify">               
+                        <ul>
+                            {lis}
+                            <li>
+                                <img src="http://image.app.magicwe.com/images/201701/1483718889395978610.png" alt=""/>
+                                <h1>本期推荐</h1>
+                            </li>
+                             <li>
+                                <img src="http://image.app.magicwe.com/images/201609/1473674187842567614.png" alt=""/>
+                                <h1>3D展示</h1>
+                            </li>
+                             <li>
+                                <img src="http://image.app.magicwe.com/images/201609/1473674198371194517.png" alt=""/>
+                                <h1>全景展示</h1>
+                            </li>
+                        </ul> 
+                    </div>
+                </Scroller>
             </div>
             
         )

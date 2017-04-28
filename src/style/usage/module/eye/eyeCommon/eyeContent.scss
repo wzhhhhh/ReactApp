@@ -1,0 +1,26 @@
+.viewport{
+	width: 100% !important;
+	@include flex();
+	overflow-y: scroll;
+	div{
+		width: 100%;
+		h2{
+			font-size: .2rem;
+			text-align: center;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	:nth-child(2){
+		padding: 0 .1rem;
+		p{
+			padding: 0;
+			width: 100%;
+		}
+		img{
+			padding: 0;
+			width: 100%;
+		}
+	}
+}

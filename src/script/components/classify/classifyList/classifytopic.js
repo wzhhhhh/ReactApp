@@ -1,7 +1,10 @@
 import React from "react"
+// import Touchable from '../../../../component_dev/touchable/src';
+
+
 
 class Classifytopic extends React.Component{
-	render(){
+	render(){	
 		return(
 			<div className="prilist">
 				<div className="topic">
@@ -22,8 +25,9 @@ class Classifytopic extends React.Component{
 						<input type="button" value="确定"/>
 					</li>
 				</ul>
-			</div>
+			</div>	
 			)
+		}
 	}
-}
+
 export default Classifytopic
