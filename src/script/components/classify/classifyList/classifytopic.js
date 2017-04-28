@@ -10,7 +10,7 @@ class Classifytopic extends React.Component{
 			show:false
 		}
 	}
-	render(){	
+	render(){
 		return(
 			<div className="prilist">
 				<div className="topic" onClick={()=>{this.setState({show:true})}}>
@@ -19,6 +19,7 @@ class Classifytopic extends React.Component{
 				<Popup
 					show={this.state.show}
 					direction="down"
+                    maskOffset={[93, 0]}
 				>
 					<ul className="pricelist">
 						<li>全部</li>
@@ -28,15 +29,15 @@ class Classifytopic extends React.Component{
 						<li>2001-4000</li>
 						<li>4000元以上</li>
 						<li>
-							自定义价格 
+							自定义价格
 							<input type="text"/>
 							-<input type="text"/>
 							<input type="button" value="确定"/>
 						</li>
 					</ul>
 				</Popup>
-				
-			</div>	
+
+			</div>
 			)
 		}
 	}

@@ -1,12 +1,16 @@
 import React from "react"
 import Scroller from "../../../component_dev/scroller/src"
 import List from "../../../component_dev/list/src"
+import Popup from "../../../component_dev/popup/src"
+
 class EyeShot extends React.Component{
 	constructor(props) {
 	    super(props)
 	    this.state = {
 	      eyeShot: [<div/>],
-	      page:1
+	      page:1,
+		  show:false,
+		  hide:true
 	    }
 	}
 
@@ -35,49 +39,56 @@ class EyeShot extends React.Component{
 							scrollX={true}
     						scrollY={false}
 						>
-							<a className="active" href="#js">全部</a>
-							<a href="#js">涨姿势</a>
-							<a href="#js">户外</a>
-							<a href="#js">家居</a>
-							<a href="#js">时尚</a>
-							<a href="#js">礼物</a>
-							<a href="#js">数码</a>
-							<a href="#js">创意生活</a>
-							<a href="#js">设计感</a>
-							<a href="#js">科技范</a>
-							<a href="#js">母婴</a>
-							<a href="#js">宠物</a>
-							<a href="#js">测评</a>
-							<a href="#js">欧洲杯</a>
+							<b className="active">全部</b>
+							<b>涨姿势</b>
+							<b>户外</b>
+							<b>家居</b>
+							<b>时尚</b>
+							<b>礼物</b>
+							<b>数码</b>
+							<b>创意生活</b>
+							<b>设计感</b>
+							<b>科技范</b>
+							<b>母婴</b>
+							<b>宠物</b>
+							<b>测评</b>
+							<b>欧洲杯</b>
 						</Scroller>
-						<i className="yo-ico navmore">&#xf033;</i>
+						<i className="yo-ico navmore" onClick={()=>{this.setState({show:true})}}>&#xf033;</i>
 					</div>
-					<div className="zw">
-						<div className="navActive">
-							<div className="nATitle">
-								<span>切换频道</span>
-								<i className="yo-ico nAIco">&#xf033;</i>
-							</div>
-							<div className="nAList">
-								<ul>
-									<li><a className="active" href="#qqq">全部</a></li>
-									<li><a href="#qqq">涨姿势</a></li>
-									<li><a href="#qqq">户外</a></li>
-									<li><a href="#qqq">家居</a></li>
-									<li><a href="#qqq">时尚</a></li>
-									<li><a href="#qqq">礼物</a></li>
-									<li><a href="#qqq">数码</a></li>
-									<li><a href="#qqq">创意生活</a></li>
-									<li><a href="#qqq">设计感</a></li>
-									<li><a href="#qqq">科技范</a></li>
-									<li><a href="#qqq">母婴</a></li>
-									<li><a href="#qqq">宠物</a></li>
-									<li><a href="#qqq">测评</a></li>
-									<li><a href="#qqq">欧洲杯</a></li>
-								</ul>
+					<Popup
+						show={this.state.show}
+						hide={this.state.hide}
+						direction="down"
+						maskOffset={[47, 0]}
+					>
+						<div className="zw">
+							<div className="navActive">
+								<div className="nATitle">
+									<span>切换频道</span>
+									<i className="yo-ico nAIco" onClick={()=>{this.setState({hide:false})}}>&#xf033;</i>
+								</div>
+								<div className="nAList">
+									<ul>
+										<li><a className="active" href="#qqq">全部</a></li>
+										<li><a href="#qqq">涨姿势</a></li>
+										<li><a href="#qqq">户外</a></li>
+										<li><a href="#qqq">家居</a></li>
+										<li><a href="#qqq">时尚</a></li>
+										<li><a href="#qqq">礼物</a></li>
+										<li><a href="#qqq">数码</a></li>
+										<li><a href="#qqq">创意生活</a></li>
+										<li><a href="#qqq">设计感</a></li>
+										<li><a href="#qqq">科技范</a></li>
+										<li><a href="#qqq">母婴</a></li>
+										<li><a href="#qqq">宠物</a></li>
+										<li><a href="#qqq">测评</a></li>
+										<li><a href="#qqq">欧洲杯</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>					
+					</Popup>
 				</div>
 				<div className="viewListBox">
 					<List
@@ -88,15 +99,8 @@ class EyeShot extends React.Component{
 					        return (
 					            <div onClick={this.goEyeView.bind(this,item.article_id)} className="viewList">
 									<div>
-										<List.LazyImage
-						                    src={item.image_url}
-						                    defaultImage={null}
-						                    style={{
-						                        width: '100%',
-						                        height: 275
-						                    }}
-						                />
-										
+
+										<img src={item.image_url} alt=""/>
 									</div>
 									<h2>{item.subtitle}</h2>
 								</div>
