@@ -16,7 +16,7 @@ export default class CartIndex extends React.Component{
 			<div className="cartMain">
 				<CartHeader />
 				<CartList goods_list={this.state.goods_list}/>
-				<CartCount />
+				<CartCount total={this.state.total}/>
 			</div>
 			)
 	}
@@ -24,7 +24,6 @@ export default class CartIndex extends React.Component{
 		fetch(`api/cart/115140`)
 			.then((response)=>response.json())
 			.then((res)=>{
-				console.log(res)
 				this.setState({
 					goods_list: res.cart.goods_list,
 					total: res.cart.total

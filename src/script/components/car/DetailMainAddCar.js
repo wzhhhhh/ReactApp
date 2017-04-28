@@ -43,7 +43,7 @@ class DetailMainList extends React.Component {
 						<InputNumber
 						    value={this.state.buyNumber}
     						onChange={buyNumber => this.setState({buyNumber})}
-    						min={1}   
+    						min={1}
 						/>
 					</div>
 					<div className="countPrice">
