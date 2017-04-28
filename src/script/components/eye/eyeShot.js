@@ -88,7 +88,15 @@ class EyeShot extends React.Component{
 					        return (
 					            <div onClick={this.goEyeView.bind(this,item.article_id)} className="viewList">
 									<div>
-										<img src={item.image_url} alt=""/>
+										<List.LazyImage
+						                    src={item.image_url}
+						                    defaultImage={null}
+						                    style={{
+						                        width: '100%',
+						                        height: 275
+						                    }}
+						                />
+										
 									</div>
 									<h2>{item.subtitle}</h2>
 								</div>

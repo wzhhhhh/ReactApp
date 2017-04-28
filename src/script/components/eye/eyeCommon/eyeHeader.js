@@ -20,12 +20,14 @@ class EyeHeader extends React.Component{
 			)
 	}
 	componentDidMount(){
-		fetch(`/api/article/547`)
+		let id = this.props.goEyeView
+		fetch(`/api/article/${id}`)
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
 					view:res.article
 				})
+				
 			})
 	}
 }
