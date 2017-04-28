@@ -1,10 +1,11 @@
 import React,{Component} from 'react'
+import {Link} from 'react-router'
 
 export default class View extends Component {
 	getview(val){
 		return  val.map((value,index)=>{
 			return (
-				<li><i></i><a href="#javascript:;">{value.title}</a></li>
+				<li><i></i><Link to={`/eyeView/${value.article_id}`}>{value.title}</Link></li>
 				)
 		})
 	}

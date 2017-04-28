@@ -19,7 +19,6 @@ export default class DetailGoodsShow extends React.Component {
 		fetch(`api/productDetailImage/${this.props.params.id}`)
 			.then((response)=>response.json())
 			.then((res)=>{
-				console.log(res)
 				this.setState({
 					imgList: res.image
 				})
