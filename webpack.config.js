@@ -20,7 +20,13 @@ module.exports = {
 				target:'http://m.miaohui.com',
 				changeOrigin:true,
 				pathRewrite:{'^/api':''}
+			},
+			'/nlogin':{
+				target:'http://localhost:9000',
+				changeOrigin:true,
+				pathRewrite:{'^/nlogin':''}
 			}
+
 		}
 	},
 	module: {

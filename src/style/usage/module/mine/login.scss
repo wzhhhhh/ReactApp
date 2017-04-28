@@ -38,6 +38,23 @@
 				.ldian{
 					color:#333;
 				}
+				li{
+					.m{
+						margin-left: .11rem;
+						padding:.03rem;
+						background-color: #6d695e;
+						color: #fff;
+						border-radius: .07rem;
+						font-size: .1rem;
+					}
+					.mq{
+						margin-left: .11rem;
+						padding:.03rem;
+						background-color: #ffebbc;
+						color: #1b1d23;
+						border-radius: .03rem;
+					}
+				}
 				
 			}
 			.lshezhi{
@@ -135,4 +152,10 @@
 					}
 				}
 			}
+
+			
 	}
+	.regi{
+				height:3rem;
+				background:#fff;
+			}
