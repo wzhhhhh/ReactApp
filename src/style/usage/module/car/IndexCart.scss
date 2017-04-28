@@ -17,19 +17,17 @@
 		@include flexbox();
 		@include flex-direction(column);
 		width: 100%;
-		// .yo-header-cartHeader{
-		// 	height: .5rem;
-		// 	h1 {
-		// 		color: #fff;
-		// 	}
-		// 	span {
-		// 		color: #fff;
-		// 	}
-		// }
+		.yo-header{
+			height: .5rem;
+			width: 100%;
+		}
 		.cartList {
 			@include flex();
 			width: 100%;
 			padding: 0 .1rem;
+			.yo-scroller{
+				height: 100%;
+			}
 		}
 		.cartCount {
 			padding: .1rem;

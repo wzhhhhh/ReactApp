@@ -17,8 +17,6 @@ class DetailMainList extends React.Component {
 		})
 	}
 	render(){
-		console.log(this.props.number)
-		console.log(this.props.onChangeNumber)
 		let lis = this.props.goodsAddCarList.map((item)=>{
 			return <span>{item.show_attr}</span>
 		})

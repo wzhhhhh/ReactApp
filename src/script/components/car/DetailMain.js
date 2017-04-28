@@ -14,7 +14,6 @@ export default class DetailMain extends React.Component {
 		}
 	}
 	addCarShow(IsShow){
-		console.log(IsShow);
 		this.setState({
 			IsShow: IsShow
 		})
