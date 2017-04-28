@@ -20,6 +20,7 @@ import Zuji from './components/mine/zuji/zuji'
 import Youhui from './components/mine/youhuiquan/youhuiquan'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
+
 import cartStore from './redux/cartStore';
 import { Provider } from 'react-redux';
 ReactDOM.render((

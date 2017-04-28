@@ -1,8 +1,6 @@
 import React,{Component} from 'react'
 import Loading,{loading} from '../../../component_dev/Loading/src'
-import Scroler from '../../../component_dev/scroller/src';
-import Link from "react-router";
-
+import Scroller from '../../../component_dev/scroller/src';
 import Banner from './module/banner'
 import HomeNav from './module/nav'
 import HomeView from './module/view'
@@ -27,7 +25,7 @@ export default class Home extends Component {
  	}
   	render(){
    		return (
-   			<Scroler
+   			<Scroller
 				ref="loading"
 				useLoadMore={true}
 				onLoad={() => {
@@ -49,7 +47,7 @@ export default class Home extends Component {
 					<HomeActivity activity={this.state.activity}/>
 					<HomeList list={this.state.list}></HomeList>
 		    	</div>	
-	    	</Scroler>
+	    	</Scroller>
 	    )
 	}
 	componentDidMount(){

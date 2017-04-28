@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import Scroller from '../../../../component_dev/scroller/src';
 import {Link} from 'react-router'
 
-
 export default class HomeNav extends Component {
 	getnavpic(url){
 		return  url.map((value,index)=>{
