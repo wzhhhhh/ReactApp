@@ -18,6 +18,19 @@
 			right: .12rem;
 			top: 0rem;
 		}
+		.hidetitle{
+			position: absolute;
+			top:.5rem;
+			right: .05rem;
+			width: 45%;
+			background: rgba(0,0,0,.5);
+			z-index: 999;
+			a{
+				text-decoration: none;
+				color: #fff;
+				padding-left: .08rem;
+			}
+		}
 	}
 	.viewNav{
 		height: .52rem;
@@ -34,7 +47,7 @@
 				@include flexbox();
 				.scroller{
 					@include flexbox();
-					b{
+					a{
 						font-weight: normal;
 						@include flex();
 						width: .45rem !important;
@@ -132,6 +145,7 @@
 						text-align: center;
 						@include border(0 1px 1px 0,#ddd,solid);
 						a{
+							font-weight: normal;
 							display: block;
 							color: #999;
 							height: .5rem;

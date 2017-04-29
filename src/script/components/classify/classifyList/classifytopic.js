@@ -10,11 +10,16 @@ class Classifytopic extends React.Component{
 			show:false
 		}
 	}
+	toggle=()=>{
+		this.setState({
+			show:!this.state.show
+		})
+	}
 	render(){
 		return(
 			<div className="prilist">
-				<div className="topic" onClick={()=>{this.setState({show:true})}}>
-					<p>价格筛选</p><i className="yo-ico">&#xf033;</i>
+				<div className="topic">
+					<p>价格筛选</p><i className="yo-ico" onClick={this.toggle}>&#xf033;</i>
 				</div>
 				<Popup
 					show={this.state.show}

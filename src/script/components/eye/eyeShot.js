@@ -2,6 +2,8 @@ import React from "react"
 import Scroller from "../../../component_dev/scroller/src"
 import List from "../../../component_dev/list/src"
 import Popup from "../../../component_dev/popup/src"
+import {Link} from "react-router"
+
 
 class EyeShot extends React.Component{
 	constructor(props) {
@@ -10,7 +12,7 @@ class EyeShot extends React.Component{
 	      eyeShot: [<div/>],
 	      page:1,
 		  show:false,
-		  hide:true
+		  showSpan:true
 	    }
 	}
 
@@ -18,7 +20,21 @@ class EyeShot extends React.Component{
         this.props.router.push(`/eyeView/${article_id}`)
     }
 
+	handleHide = function hide(){
+	    this.setState({
+		   showSpan:!this.state.showSpan,
+		   State:this.state.showSpan ? "block" : "none"
+	   })
+    }
+
+	toggle = ()=>{
+		this.setState({
+			show:!this.state.show
+		})
+	}
+
 	render(){
+		console.log(this)
 		let list = this.state.eyeShot.map((value)=>{return (
                <div onClick={this.goEyeView.bind(this,value.article_id)} className="viewList">
 					<div>
@@ -30,7 +46,18 @@ class EyeShot extends React.Component{
 		return(
 			<div className="eyeshot">
 				<div className="eyeheader">
-					<span>视野</span><i className="yo-ico listmore">&#xf07e;</i>
+					<span>视野</span>
+					<i className="yo-ico listmore" onClick={this.handleHide}>&#xf07e;</i>
+					<div className="hidetitle" style={{display:"{this.handleHide.State}"}}>
+						<p>
+							<i className="yo-ico">&#xf067;</i>
+							<Link to="/zuji">足迹</Link>
+						</p>
+						<p>
+							<i className="yo-ico">&#xf04a;</i>
+							<Link to="/search">搜索</Link>
+						</p>
+					</div>
 				</div>
 				<div className="viewNav">
 					<div className="nav">
@@ -39,22 +66,22 @@ class EyeShot extends React.Component{
 							scrollX={true}
     						scrollY={false}
 						>
-							<b className="active">全部</b>
-							<b>涨姿势</b>
-							<b>户外</b>
-							<b>家居</b>
-							<b>时尚</b>
-							<b>礼物</b>
-							<b>数码</b>
-							<b>创意生活</b>
-							<b>设计感</b>
-							<b>科技范</b>
-							<b>母婴</b>
-							<b>宠物</b>
-							<b>测评</b>
-							<b>欧洲杯</b>
+							<Link  to="/eyeShot" activeClassName="active">全部</Link>
+							<Link activeClassName="active">涨姿势</Link>
+							<Link activeClassName="active">户外</Link>
+							<Link activeClassName="active">家居</Link>
+							<Link activeClassName="active">时尚</Link>
+							<Link activeClassName="active">礼物</Link>
+							<Link activeClassName="active">数码</Link>
+							<Link activeClassName="active">创意生活</Link>
+							<Link activeClassName="active">设计感</Link>
+							<Link activeClassName="active">科技范</Link>
+							<Link activeClassName="active">母婴</Link>
+							<Link activeClassName="active">宠物</Link>
+							<Link activeClassName="active">测评</Link>
+							<Link activeClassName="active">欧洲杯</Link>
 						</Scroller>
-						<i className="yo-ico navmore" onClick={()=>{this.setState({show:true})}}>&#xf033;</i>
+						<i className="yo-ico navmore" onClick={this.toggle}>&#xf033;</i>
 					</div>
 					<Popup
 						show={this.state.show}
@@ -66,24 +93,24 @@ class EyeShot extends React.Component{
 							<div className="navActive">
 								<div className="nATitle">
 									<span>切换频道</span>
-									<i className="yo-ico nAIco" onClick={()=>{this.setState({hide:false})}}>&#xf033;</i>
+									<i className="yo-ico nAIco" onClick={this.toggle}>&#xf033;</i>
 								</div>
 								<div className="nAList">
 									<ul>
-										<li><a className="active" href="#qqq">全部</a></li>
-										<li><a href="#qqq">涨姿势</a></li>
-										<li><a href="#qqq">户外</a></li>
-										<li><a href="#qqq">家居</a></li>
-										<li><a href="#qqq">时尚</a></li>
-										<li><a href="#qqq">礼物</a></li>
-										<li><a href="#qqq">数码</a></li>
-										<li><a href="#qqq">创意生活</a></li>
-										<li><a href="#qqq">设计感</a></li>
-										<li><a href="#qqq">科技范</a></li>
-										<li><a href="#qqq">母婴</a></li>
-										<li><a href="#qqq">宠物</a></li>
-										<li><a href="#qqq">测评</a></li>
-										<li><a href="#qqq">欧洲杯</a></li>
+										<li><Link activeClassName="active" className="active">全部</Link></li>
+										<li><Link activeClassName="active">涨姿势</Link></li>
+										<li><Link activeClassName="active">户外</Link></li>
+										<li><Link activeClassName="active">家居</Link></li>
+										<li><Link activeClassName="active">时尚</Link></li>
+										<li><Link activeClassName="active">礼物</Link></li>
+										<li><Link activeClassName="active">数码</Link></li>
+										<li><Link activeClassName="active">创意生活</Link></li>
+										<li><Link activeClassName="active">设计感</Link></li>
+										<li><Link activeClassName="active">科技范</Link></li>
+										<li><Link activeClassName="active">母婴</Link></li>
+										<li><Link activeClassName="active">宠物</Link></li>
+										<li><Link activeClassName="active">测评</Link></li>
+										<li><Link activeClassName="active">欧洲杯</Link></li>
 									</ul>
 								</div>
 							</div>
