@@ -1,11 +1,20 @@
 import React from "react"
+import Modal from "../../../../component_dev/modal/src"
+import {Link} from "react-router"
 
 class classHeader extends React.Component{
 	constructor(props) {
 	    super(props)
 	    this.state = {
-	      List: [] 
+	      List: [] ,
+		  showSpan:false
 	    }
+	}
+
+	handleHide=()=>{
+		this.setState({
+			showSpan:!this.state.showSpan
+		})
 	}
 
 	back() {
@@ -24,13 +33,31 @@ class classHeader extends React.Component{
 				}
 			}
 		}
-		
-		
+
+
 		return(
             <div className="classheader">
             	<span onClick={this.back.bind(this)} className="back"></span>
             	<h1>{name}</h1>
-            	<span className="yo-ico list">&#xf07e;</span>
+            	<span className="yo-ico list" onClick={this.handleHide}>&#xf07e;</span>
+				<Modal
+					show={this.state.showSpan}
+					align="top"
+					contentOffset={[170,0]}
+					maskOffset={[47, 0]}
+					animation= "fade"
+					>
+					<div className="hidetitle">
+						<p>
+							<i className="yo-ico">&#xf067;</i>
+							<Link to="/zuji">足迹</Link>
+						</p>
+						<p>
+							<i className="yo-ico">&#xf04a;</i>
+							<Link to="/search">搜索</Link>
+						</p>
+					</div>
+				</Modal>
             </div>
 		)
 	}

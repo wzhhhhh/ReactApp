@@ -18,19 +18,6 @@
 			right: .12rem;
 			top: 0rem;
 		}
-		.hidetitle{
-			position: absolute;
-			top:.5rem;
-			right: .05rem;
-			width: 45%;
-			background: rgba(0,0,0,.5);
-			z-index: 999;
-			a{
-				text-decoration: none;
-				color: #fff;
-				padding-left: .08rem;
-			}
-		}
 	}
 	.viewNav{
 		height: .52rem;
@@ -160,6 +147,23 @@
 					}
 				}
 			}
+		}
+	}
+}
+.yo-modal-top{
+	background-color: transparent;
+	display:block;
+	.hidetitle{
+		width: 2rem;
+		background: rgba(0,0,0,.8);
+		text-align: center;
+		color: #fff;
+		a{
+			text-decoration: none;
+			color: #fff;
+			line-height: .4rem;
+			font-size: .15rem;
+			padding-left: .08rem;
 		}
 	}
 }

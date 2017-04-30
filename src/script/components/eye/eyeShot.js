@@ -3,6 +3,7 @@ import Scroller from "../../../component_dev/scroller/src"
 import List from "../../../component_dev/list/src"
 import Popup from "../../../component_dev/popup/src"
 import {Link} from "react-router"
+import Modal from "../../../component_dev/modal/src"
 
 
 class EyeShot extends React.Component{
@@ -12,7 +13,7 @@ class EyeShot extends React.Component{
 	      eyeShot: [<div/>],
 	      page:1,
 		  show:false,
-		  showSpan:true
+		  showSpan:false
 	    }
 	}
 
@@ -20,10 +21,9 @@ class EyeShot extends React.Component{
         this.props.router.push(`/eyeView/${article_id}`)
     }
 
-	handleHide = function hide(){
+	handleHide =()=>{
 	    this.setState({
-		   showSpan:!this.state.showSpan,
-		   State:this.state.showSpan ? "block" : "none"
+		   showSpan:!this.state.showSpan
 	   })
     }
 
@@ -34,7 +34,6 @@ class EyeShot extends React.Component{
 	}
 
 	render(){
-		console.log(this)
 		let list = this.state.eyeShot.map((value)=>{return (
                <div onClick={this.goEyeView.bind(this,value.article_id)} className="viewList">
 					<div>
@@ -48,16 +47,24 @@ class EyeShot extends React.Component{
 				<div className="eyeheader">
 					<span>视野</span>
 					<i className="yo-ico listmore" onClick={this.handleHide}>&#xf07e;</i>
-					<div className="hidetitle" style={{display:"{this.handleHide.State}"}}>
-						<p>
-							<i className="yo-ico">&#xf067;</i>
-							<Link to="/zuji">足迹</Link>
-						</p>
-						<p>
-							<i className="yo-ico">&#xf04a;</i>
-							<Link to="/search">搜索</Link>
-						</p>
-					</div>
+					<Modal
+						show={this.state.showSpan}
+						align="top"
+   						contentOffset={[170,0]}
+						maskOffset={[47, 0]}
+						animation= "fade"
+						>
+						<div className="hidetitle">
+							<p>
+								<i className="yo-ico">&#xf067;</i>
+								<Link to="/zuji">足迹</Link>
+							</p>
+							<p>
+								<i className="yo-ico">&#xf04a;</i>
+								<Link to="/search">搜索</Link>
+							</p>
+						</div>
+					</Modal>
 				</div>
 				<div className="viewNav">
 					<div className="nav">
@@ -85,7 +92,6 @@ class EyeShot extends React.Component{
 					</div>
 					<Popup
 						show={this.state.show}
-						hide={this.state.hide}
 						direction="down"
 						maskOffset={[47, 0]}
 					>

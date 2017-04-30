@@ -24,3 +24,21 @@
 		margin: .15rem;
 	}
 }
+.yo-modal-top{
+	background-color: transparent;
+	display:block;
+	.hidetitle{
+		width: 2rem;
+		// height: 2rem;
+		background: rgba(0,0,0,.8);
+		text-align: center;
+		color: #fff;
+		a{
+			text-decoration: none;
+			color: #fff;
+			line-height: .4rem;
+			font-size: .15rem;
+			padding-left: .08rem;
+		}
+	}
+}
