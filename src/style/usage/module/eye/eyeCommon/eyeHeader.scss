@@ -32,3 +32,51 @@
 		background-size: .22rem;
 	}
 }
+.yo-modal >.sharebox>.shareBlock{
+	height: 3.2rem;
+	width:100%;
+	background: #fff;
+	padding:.18rem;
+	padding-bottom: 0;
+	@include flexbox();
+	@include flex-direction(column);
+	h1{
+		font-weight: normal;
+		text-align: center;
+		font-size: .2rem;
+		margin-bottom: .1rem;
+	}
+	.shareIcon,.funIcon{
+		width: 100%;
+		height: .75rem;
+		@include flexbox();
+		a{
+			color: #000;
+		}
+		div{
+			text-align: center;
+			width: 25%;
+			img{
+				width: .5rem;
+				height: .5rem;
+			}
+			p{
+				line-height: .34rem;
+				font-size: .14rem;
+			}
+		}
+	}
+	hr{
+		width: 100%;
+		height: 1px;
+		color: #ddd;
+		margin: .15rem 0;
+	}
+	.esc{
+		line-height: .6rem;
+		font-size: .2rem;
+		text-align: center;
+		background: #ddd;
+		margin-top: .2rem;
+	}
+}

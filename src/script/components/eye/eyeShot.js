@@ -1,18 +1,37 @@
 import React from "react"
 import Scroller from "../../../component_dev/scroller/src"
 import List from "../../../component_dev/list/src"
+import Popup from "../../../component_dev/popup/src"
+import {Link} from "react-router"
+import Modal from "../../../component_dev/modal/src"
+
+
 class EyeShot extends React.Component{
 	constructor(props) {
 	    super(props)
 	    this.state = {
 	      eyeShot: [<div/>],
-	      page:1
+	      page:1,
+		  show:false,
+		  showSpan:false
 	    }
 	}
 
 	goEyeView(article_id){
         this.props.router.push(`/eyeView/${article_id}`)
     }
+
+	handleHide =()=>{
+	    this.setState({
+		   showSpan:!this.state.showSpan
+	   })
+    }
+
+	toggle = ()=>{
+		this.setState({
+			show:!this.state.show
+		})
+	}
 
 	render(){
 		let list = this.state.eyeShot.map((value)=>{return (
@@ -26,7 +45,26 @@ class EyeShot extends React.Component{
 		return(
 			<div className="eyeshot">
 				<div className="eyeheader">
-					<span>视野</span><i className="yo-ico listmore">&#xf07e;</i>
+					<span>视野</span>
+					<i className="yo-ico listmore" onClick={this.handleHide}>&#xf07e;</i>
+					<Modal
+						show={this.state.showSpan}
+						align="top"
+   						contentOffset={[170,0]}
+						maskOffset={[47, 0]}
+						animation= "fade"
+						>
+						<div className="hidetitle">
+							<p>
+								<i className="yo-ico">&#xf067;</i>
+								<Link to="/zuji">足迹</Link>
+							</p>
+							<p>
+								<i className="yo-ico">&#xf04a;</i>
+								<Link to="/search">搜索</Link>
+							</p>
+						</div>
+					</Modal>
 				</div>
 				<div className="viewNav">
 					<div className="nav">
@@ -35,49 +73,55 @@ class EyeShot extends React.Component{
 							scrollX={true}
     						scrollY={false}
 						>
-							<a className="active" href="#js">全部</a>
-							<a href="#js">涨姿势</a>
-							<a href="#js">户外</a>
-							<a href="#js">家居</a>
-							<a href="#js">时尚</a>
-							<a href="#js">礼物</a>
-							<a href="#js">数码</a>
-							<a href="#js">创意生活</a>
-							<a href="#js">设计感</a>
-							<a href="#js">科技范</a>
-							<a href="#js">母婴</a>
-							<a href="#js">宠物</a>
-							<a href="#js">测评</a>
-							<a href="#js">欧洲杯</a>
+							<Link  to="/eyeShot" activeClassName="active">全部</Link>
+							<Link activeClassName="active">涨姿势</Link>
+							<Link activeClassName="active">户外</Link>
+							<Link activeClassName="active">家居</Link>
+							<Link activeClassName="active">时尚</Link>
+							<Link activeClassName="active">礼物</Link>
+							<Link activeClassName="active">数码</Link>
+							<Link activeClassName="active">创意生活</Link>
+							<Link activeClassName="active">设计感</Link>
+							<Link activeClassName="active">科技范</Link>
+							<Link activeClassName="active">母婴</Link>
+							<Link activeClassName="active">宠物</Link>
+							<Link activeClassName="active">测评</Link>
+							<Link activeClassName="active">欧洲杯</Link>
 						</Scroller>
-						<i className="yo-ico navmore">&#xf033;</i>
+						<i className="yo-ico navmore" onClick={this.toggle}>&#xf033;</i>
 					</div>
-					<div className="zw">
-						<div className="navActive">
-							<div className="nATitle">
-								<span>切换频道</span>
-								<i className="yo-ico nAIco">&#xf033;</i>
-							</div>
-							<div className="nAList">
-								<ul>
-									<li><a className="active" href="#qqq">全部</a></li>
-									<li><a href="#qqq">涨姿势</a></li>
-									<li><a href="#qqq">户外</a></li>
-									<li><a href="#qqq">家居</a></li>
-									<li><a href="#qqq">时尚</a></li>
-									<li><a href="#qqq">礼物</a></li>
-									<li><a href="#qqq">数码</a></li>
-									<li><a href="#qqq">创意生活</a></li>
-									<li><a href="#qqq">设计感</a></li>
-									<li><a href="#qqq">科技范</a></li>
-									<li><a href="#qqq">母婴</a></li>
-									<li><a href="#qqq">宠物</a></li>
-									<li><a href="#qqq">测评</a></li>
-									<li><a href="#qqq">欧洲杯</a></li>
-								</ul>
+					<Popup
+						show={this.state.show}
+						direction="down"
+						maskOffset={[47, 0]}
+					>
+						<div className="zw">
+							<div className="navActive">
+								<div className="nATitle">
+									<span>切换频道</span>
+									<i className="yo-ico nAIco" onClick={this.toggle}>&#xf033;</i>
+								</div>
+								<div className="nAList">
+									<ul>
+										<li><Link activeClassName="active" className="active">全部</Link></li>
+										<li><Link activeClassName="active">涨姿势</Link></li>
+										<li><Link activeClassName="active">户外</Link></li>
+										<li><Link activeClassName="active">家居</Link></li>
+										<li><Link activeClassName="active">时尚</Link></li>
+										<li><Link activeClassName="active">礼物</Link></li>
+										<li><Link activeClassName="active">数码</Link></li>
+										<li><Link activeClassName="active">创意生活</Link></li>
+										<li><Link activeClassName="active">设计感</Link></li>
+										<li><Link activeClassName="active">科技范</Link></li>
+										<li><Link activeClassName="active">母婴</Link></li>
+										<li><Link activeClassName="active">宠物</Link></li>
+										<li><Link activeClassName="active">测评</Link></li>
+										<li><Link activeClassName="active">欧洲杯</Link></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>					
+					</Popup>
 				</div>
 				<div className="viewListBox">
 					<List
@@ -88,6 +132,7 @@ class EyeShot extends React.Component{
 					        return (
 					            <div onClick={this.goEyeView.bind(this,item.article_id)} className="viewList">
 									<div>
+
 										<img src={item.image_url} alt=""/>
 									</div>
 									<h2>{item.subtitle}</h2>

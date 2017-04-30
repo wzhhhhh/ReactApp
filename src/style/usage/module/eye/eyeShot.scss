@@ -20,8 +20,8 @@
 		}
 	}
 	.viewNav{
-		height: .52rem;	
-		position: relative;	
+		height: .52rem;
+		position: relative;
 		.nav{
 			width: 100%;
 			// display: none;
@@ -29,14 +29,13 @@
 			background: #eee;
 			height: .52rem;
 			padding-right: .5rem;
-    		// overflow: hidden;
 			.yo-scroller{
 				width: 100%;
 				@include flexbox();
 				.scroller{
-					// width: auto;
 					@include flexbox();
 					a{
+						font-weight: normal;
 						@include flex();
 						width: .45rem !important;
 						margin: 0 .15rem;
@@ -50,7 +49,7 @@
 						line-height: .5rem;
 						height: .5rem;
 						@include border(0 0 0.02rem 0,#ffa000,solid)
-					}					
+					}
 				}
 			}
 			.navmore{
@@ -58,64 +57,6 @@
 				width: .14rem;
 				top: .13rem;
 				right: .2rem;
-			}
-		}
-		.zw{
-			display: none;
-			height: .52rem;	
-			.navActive{
-				width: 100%;
-				height: .52rem;	
-				position: absolute;	
-				background: #e6e6e6;
-				.nATitle{
-					position: relative;
-					span{
-						padding-left: .155rem;
-						font-size: .15rem;
-						line-height: .52rem;
-						color: #979797;
-					}
-					.nAIco{
-						position: absolute;
-						width: .14rem;
-						top: .13rem;
-						right: .2rem; 
-						color: #999;
-					}
-				}
-				.nAList{
-					height: 1.57rem;
-					width: 100%;
-					background: #fff;
-					ul{
-						@include flexbox();
-						@include flex-direction(raw);
-						@include flex-wrap(wrap);
-						width: 100%;
-						li{
-							height: .52rem;
-							width: 20%;
-							line-height: .52rem;
-							text-align: center;
-							@include border(0 1px 1px 0,#ddd,solid);
-							a{
-								display: block;
-								color: #999;
-								height: .5rem;
-								line-height: .5rem;
-							}
-							.active{
-								@include border(0 0 2px 0,#ffa100,solid);
-							}
-						}
-						li:last-child{
-							border: 0;
-						}
-						
-					}
-					
-				}
 			}
 		}
 	}
@@ -126,11 +67,11 @@
 			padding: 0;
 			.viewList{
 				width: 100%;
-				height: 3.13rem;
+				// height: 3.13rem;
 				margin-bottom: .2rem;
 				div{
 					display: block;
-					height: 2.75rem;
+					// height: 2.75rem;
 					img{
 						width: 100%;
 						height: 100%;
@@ -145,6 +86,84 @@
 				}
 			}
 		}
-		
+	}
+}
+.yo-modal > .cont {
+    overflow: visible !important;
+	.zw{
+		// display: none;
+		width:100%;
+		height: .52rem;
+		.navActive{
+			width: 100%;
+			height: .52rem;
+			// position: absolute;
+			background: #e6e6e6;
+			// z-index: 999;
+			.nATitle{
+				position: relative;
+				span{
+					padding-left: .155rem;
+					font-size: .15rem;
+					line-height: .52rem;
+					color: #979797;
+				}
+				.nAIco{
+					position: absolute;
+					width: .14rem;
+					top: .13rem;
+					right: .2rem;
+					color: #999;
+				}
+			}
+			.nAList{
+				height: 1.57rem;
+				width: 100%;
+				background: #fff;
+				ul{
+					@include flexbox();
+					@include flex-direction(raw);
+					@include flex-wrap(wrap);
+					width: 100%;
+					li{
+						height: .52rem;
+						width: 20%;
+						line-height: .52rem;
+						text-align: center;
+						@include border(0 1px 1px 0,#ddd,solid);
+						a{
+							font-weight: normal;
+							display: block;
+							color: #999;
+							height: .5rem;
+							line-height: .5rem;
+						}
+						.active{
+							@include border(0 0 2px 0,#ffa100,solid);
+						}
+					}
+					li:last-child{
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.yo-modal-top{
+	background-color: transparent;
+	display:block;
+	.hidetitle{
+		width: 2rem;
+		background: rgba(0,0,0,.8);
+		text-align: center;
+		color: #fff;
+		a{
+			text-decoration: none;
+			color: #fff;
+			line-height: .4rem;
+			font-size: .15rem;
+			padding-left: .08rem;
+		}
 	}
 }
