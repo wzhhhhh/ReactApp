@@ -6,9 +6,21 @@ export default class CartList extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
-			buyNumber: 1
+			goodsBuyNumberList: {}
 		}
 	}
+ 	componentDidUpdate(){
+		this.props.goods_list.forEach((item) => {
+			console.log(item['goods_id'])
+			let id = item['goods_id'];
+			let number = item['goods_number']
+			this.setState = {
+				goodsBuyNumber: {
+					id: number
+				}
+			}	
+		})
+ 	}
 	render(){
 		let lists = this.props.goods_list.map((item)=>{
 			return (
@@ -24,8 +36,8 @@ export default class CartList extends React.Component{
 						<div className="bottom">
 							<InputNumber
 								ref={item.goods_id}
-							    value={this.state.buyNumber}
-	    						onChange={buyNumber => this.setState({buyNumber})}
+							    value={this.state.goodsBuyNumberList}
+    							onChange={	goodsBuyNumber => this.setState({goodsBuyNumber})}
 	    						min={1}
 							/>
 							<div className="empty"></div>
