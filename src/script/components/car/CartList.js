@@ -2,7 +2,9 @@ import React from "react";
 import CartListItemNumber from './CartListItemNumber';
 import Scroller from '../../../component_dev/scroller/src';
 import InputNumber from '../../../Component_dev/inputnumber/src';
-export default class CartList extends React.Component{
+import cartStore from '../../redux/cartStore';
+import { connect } from 'react-redux';
+class CartList extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
@@ -10,7 +12,7 @@ export default class CartList extends React.Component{
 		}
 	}
  	componentWillReceiveProps(nextProps){
- 		console.log(nextProps)
+ 		// console.log(nextProps)
 		let obj = {};
 		nextProps.goods_list.forEach((item) => {
 			let id = item['goods_id'];
@@ -54,7 +56,7 @@ export default class CartList extends React.Component{
 	    						min={1}
 							/>
 							<div className="empty"></div>
-							<img src="/images/delete_cart.png" className="delete" />
+							<img onClick={this.props.onChangeNumber.bind(this,{type: 'DELETE'})} src="/images/delete_cart.png" className="delete" />
 						</div>
 					</div>
 				</div>
@@ -73,3 +75,9 @@ export default class CartList extends React.Component{
 		)
 	}
 }
+
+
+export default connect(
+  cartStore().mapStateToProps,
+  cartStore().mapDispatchToProps
+)(CartList)

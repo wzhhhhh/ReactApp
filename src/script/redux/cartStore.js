@@ -5,7 +5,7 @@ export default () => {
 	//map state to component props
 	let mapStateToProps = (state)=> {
 		return {
-			number: state.number
+			buyGoodsTypeNumber: state.buyGoodsTypeNumber
 		}
 	}
 	//map dispatch to component props
@@ -16,15 +16,23 @@ export default () => {
 	}
 
 	//reduces
-	let reduces = (state={number: 0}, action) => {
+	let reduces = (state={buyGoodsTypeNumber: 0}, action) => {
 		switch (action.type){
-			case 'NUMBERPLUS':
+			case 'CHECKIN':
 				return {
-					number: state.number + 1
+					buyGoodsTypeNumber: state.buyGoodsTypeNumber + 1
 				}
-			case 'NUMBERMINUS':
+			case 'CHECKOUT':
 				return {
-					number: state.number - 1
+					buyGoodsTypeNumber: state.buyGoodsTypeNumber - 1
+				}
+			case 'DELETE':
+				return {
+					buyGoodsTypeNumber: state.buyGoodsTypeNumber - 1
+				}
+			case 'RESET':
+				return {
+					buyGoodsTypeNumber: action.buyGoodsTypeNumber
 				}
 			default :
 				return  state

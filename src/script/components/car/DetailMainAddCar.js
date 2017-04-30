@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router'
 import InputNumber from '../../../Component_dev/inputnumber/src';
-import cartStore from '../../redux/cartStore';
-
 
 export default class DetailMainList extends React.Component {
 	constructor(props){
