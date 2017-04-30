@@ -2,19 +2,14 @@ import React from 'react';
 import {Link} from 'react-router'
 import InputNumber from '../../../Component_dev/inputnumber/src';
 import cartStore from '../../redux/cartStore';
-import { connect } from 'react-redux';
 
-class DetailMainList extends React.Component {
+
+export default class DetailMainList extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
 			buyNumber: 1
 		}
-	}
-	componentDidMount(){
-		this.props.onChangeNumber({
-			type: 'NUMBERPLUS'
-		})
 	}
 	render(){
 		let lis = this.props.goodsAddCarList.map((item)=>{
@@ -59,8 +54,3 @@ class DetailMainList extends React.Component {
 		)
 	}
 }
-
-export default connect(
-	cartStore().mapStateToProps,
-	cartStore().mapDispatchToProps
-)(DetailMainList)

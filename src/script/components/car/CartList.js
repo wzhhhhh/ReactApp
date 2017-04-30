@@ -9,20 +9,26 @@ export default class CartList extends React.Component{
 			goodsBuyNumberList: {}
 		}
 	}
- 	componentDidUpdate(){
-		this.props.goods_list.forEach((item) => {
-			console.log(item['goods_id'])
+ 	componentWillReceiveProps(nextProps){
+ 		console.log(nextProps)
+		let obj = {};
+		nextProps.goods_list.forEach((item) => {
 			let id = item['goods_id'];
-			let number = item['goods_number']
-			this.setState = {
-				goodsBuyNumber: {
-					id: number
-				}
-			}	
+			let number = item['goods_number'];
+			obj[id] = number;
+			this.setState({
+				goodsBuyNumberList: obj
+			})	
 		})
  	}
 	render(){
+		// console.log(this.state.goodsBuyNumberList)
+		let obj = {};
 		let lists = this.props.goods_list.map((item)=>{
+			let id = item['goods_id'];
+			let number = item['goods_number'];
+			obj[id] = number;
+			// console.log(this.state.goodsBuyNumberList[id])
 			return (
 				<div className="item">
 					<div className="check"></div>
@@ -36,8 +42,15 @@ export default class CartList extends React.Component{
 						<div className="bottom">
 							<InputNumber
 								ref={item.goods_id}
-							    value={this.state.goodsBuyNumberList}
-    							onChange={	goodsBuyNumber => this.setState({goodsBuyNumber})}
+							    value={this.state.goodsBuyNumberList[id]}
+    							onChange={value => {
+    								// console.log(value);
+    								obj[id] = value;
+    								// console.log(obj)
+    								this.setState({
+    									goodsBuyNumberList: obj
+    								})
+    							}}
 	    						min={1}
 							/>
 							<div className="empty"></div>
