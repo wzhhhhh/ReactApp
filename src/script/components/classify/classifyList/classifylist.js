@@ -19,9 +19,6 @@ class Classifylist extends React.Component{
 	Zuji(data){
 		this.props.Zuji(data)
 		localStorage.setItem("info",data)
-
-		// console.log(a);
-		// localStorage.setItem("zuji",arr)
 	}
 
 	componentWillMount() {
@@ -37,14 +34,6 @@ class Classifylist extends React.Component{
 
 
 	render(){
-		// // console.log(this.props.Zuji(data))
-		// let arr = [];
-		// var a = localStorage.getItem("info");
-		// arr = arr.concat(a)
-		// localStorage.setItem("arr",arr)
-		// var array = localStorage.getItem("arr");
-		//
-		// console.log(array);
 		return(
 			<div className="clist">
 				<List
