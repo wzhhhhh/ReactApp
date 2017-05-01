@@ -8,11 +8,12 @@ class CartList extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
-			goodsBuyNumberList: {}
+			goodsBuyNumberList: {},
+			lists: []
 		}
 	}
  	// componentWillReceiveProps(nextProps){
- 	// 	// console.log(nextProps)
+ 	// 	console.log(nextProps)
 		// let obj = {};
 		// nextProps.goods_list.forEach((item) => {
 		// 	let id = item['goods_id'];
@@ -24,7 +25,6 @@ class CartList extends React.Component{
 		// })
  	// }
  	componentDidMount(){
- 		// console.log(nextProps)
 		let obj = {};
 		this.props.goods_list.forEach((item) => {
 			let id = item['goods_id'];
@@ -36,7 +36,6 @@ class CartList extends React.Component{
 		})
  	}
 	render(){
-		// console.log(this.state.goodsBuyNumberList)
 		let obj = {};
 		let lists = this.props.goods_list.map((item)=>{
 			let id = item['goods_id'];
@@ -63,8 +62,8 @@ class CartList extends React.Component{
     								this.setState({
     									goodsBuyNumberList: obj
     								})
-    								console.log(obj)
-    								console.log(this.state.goodsBuyNumberList)
+    								// console.log(obj)
+    								// console.log(this.state.goodsBuyNumberList)
     							}}
 	    						min={1}
 							/>
@@ -75,7 +74,6 @@ class CartList extends React.Component{
 				</div>
 			)
 		})
-		// console.log(this.state.goodsBuyNumberList)
 		return(
 			<Scroller
 			    scrollX={false}
