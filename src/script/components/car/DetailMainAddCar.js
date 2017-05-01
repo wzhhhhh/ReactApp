@@ -32,7 +32,7 @@ export default class DetailMainList extends React.Component {
 				</div>
 				<div className="goodsCount">
 					<div className="countNumber">
-						<span className="number">{this.props.number}</span>
+						<span className="number">购买数量</span>
 						<InputNumber
 						    value={this.state.buyNumber}
     						onChange={buyNumber => this.setState({buyNumber})}
@@ -43,7 +43,7 @@ export default class DetailMainList extends React.Component {
 						<span className="priceAll">商品总价</span>
 						<div className="priceBox">
 							<span className="count">￥188</span>
-							<span className="choose">购买数量购买数量</span>
+							<span className="choose"></span>
 						</div>
 					</div>
 				</div>
