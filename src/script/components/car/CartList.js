@@ -47,7 +47,7 @@ class CartList extends React.Component{
 							    value={this.state.goodsBuyNumberList[id]}
     							onChange={value => {
     								// console.log(value);
-    								obj[id] = value;
+    								obj[id] = value.toString();
     								// console.log(obj)
     								this.setState({
     									goodsBuyNumberList: obj

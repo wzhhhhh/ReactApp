@@ -13,7 +13,7 @@ export default class Index extends React.Component {
 	render(){
 		return (
 			<div className="DetailIndex">
-				<DetailMain goBack={this.goBack.bind(this)} goodsId={this.props.params.id}  lll={this.goToDetailShow.bind(this)} />
+				<DetailMain goToDetailShow={this.goToDetailShow.bind(this)} goBack={this.goBack.bind(this)} goodsId={this.props.params.id}  lll={this.goToDetailShow.bind(this)} />
 			</div>
 		)
 	}

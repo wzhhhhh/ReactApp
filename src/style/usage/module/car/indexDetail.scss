@@ -204,6 +204,11 @@
 								line-height: .3rem;
 								color: #646464;
 								padding: 0 .05rem;
+								&.active {
+									color: #fff;
+									background: #ffd162;
+									@include border(1px, #fff, solid,3px)
+								}
 							}
 						}
 					}
@@ -248,7 +253,7 @@
 								@include flex();
 								@include flexbox();
 								.count {
-									width: .6rem;
+									width: .8rem;
 									display: block;
 									line-height: .5rem;
 									font-size: .16rem;

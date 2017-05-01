@@ -30,6 +30,9 @@ export default class DetailMain extends React.Component {
 	goToDetailShow(id){
 		this.props.lll(id);
 	}
+	toGoodsShow(id){
+		this.props.goToDetailShow(id);
+	}
 	render(){
 		let show = {
 			visibility: this.state.IsShow ? 'visible' : 'hidden'
@@ -38,7 +41,7 @@ export default class DetailMain extends React.Component {
 			<div className="DetailMain">
 				<span className="back yo-ico" onClick={this.goBack.bind(this)}>&#xf07d;</span>
 				<div className="container">
-					<DetailMainList goodsListInfo={this.state.productInfo}/>
+					<DetailMainList toGoodsShow={this.toGoodsShow.bind(this)} goodsListInfo={this.state.productInfo}/>
 					<DetailMainFooter addCarIsShow={this.addCarShow.bind(this)} onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
 				</div>
 				<div className="modal" style={show}>
