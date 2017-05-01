@@ -33,20 +33,28 @@ class EyeHeader extends React.Component{
 						<h1>发现创意，乐享生活</h1>
 						<div className="shareIcon">
 							<div>
-								<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_1@2x_b.png" />
-								<p>新浪微博</p>
+								<Link to="/sharepage">
+									<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_1@2x_b.png" />
+									<p>新浪微博</p>
+								</Link>
 							</div>
 							<div>
-								<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_24@2x_b.png" />
-								<p>QQ好友</p>
+								<Link to="/sharepage">
+									<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_24@2x_b.png" />
+									<p>QQ好友</p>
+								</Link>
 							</div>
 							<div>
-								<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_6@2x_b.png" />
-								<p>QQ空间</p>
+								<Link to="/sharepage">
+									<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_6@2x_b.png" />
+									<p>QQ空间</p>
+								</Link>
 							</div>
 							<div>
-								<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_5@2x_b.png" />
-								<p>豆瓣</p>
+								<Link to="/sharepage">
+									<img src="http://f1.webshare.mob.com/code/res/icon/sns_icon_5@2x_b.png" />
+									<p>豆瓣</p>
+								</Link>
 							</div>
 						</div>
 						<hr/>

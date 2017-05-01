@@ -18,6 +18,12 @@ class Classifylist extends React.Component{
 	}
 	Zuji(data){
 		this.props.Zuji(data)
+		// console.log(data)
+		// let zuji = {
+		// 	url:data[0],
+		// 	title:data[1],
+		// 	price:data[2]
+		// }
 		localStorage.setItem("info",data)
 	}
 

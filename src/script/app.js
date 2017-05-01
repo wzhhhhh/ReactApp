@@ -9,6 +9,7 @@ import Classify from './components/classify/classify'
 import ClassList from './components/classify/ClassList'
 import EyeShot from './components/eye/eyeShot'
 import EyeView from './components/eye/EyeView'
+import SharePage from "./components/eye/eyeCommon/sharepage.js"
 import CartIndex from './components/car/CartIndex'
 import Login from './components/mine/login'
 import Detail from './components/car/DetailIndex'
@@ -39,10 +40,11 @@ ReactDOM.render((
 			<Route path="/detailGoodsShow/:id" component={DetailGoodsShow}/>
 			<Route path="/classList/:id" component={ClassList}/>
 			<Route path="/eyeView/:id" component={EyeView}/>
+			<Route path="/sharepage" component={SharePage}/>
 			<Route path="/onlogin" component={OnloginHeader}/>
 			<Route path="/dingdan" component={Dingdan}/>
 			<Route path="/zuji" component={Zuji}/>
 			<Route path="/youhui" component={Youhui}/>
-		</Router>	
+		</Router>
 	</Provider>
 	),(document.getElementById('root')))
