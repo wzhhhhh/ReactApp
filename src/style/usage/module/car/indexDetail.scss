@@ -11,6 +11,21 @@
 			background: #fff;
 			height: 100%;
 			width: 100%;
+			.back {
+				position: absolute !important;
+				top: .25rem;
+				left: .25rem;
+				display: block;
+				width: .4rem;
+				height: .4rem;
+				background-color: #e2e2e2;
+				color: #f7b924;
+				font-size: .2rem;
+				text-align: center;
+				line-height: .4rem;
+				@include border(1px, #e2e2e2, solid, 50%);
+				z-index: 1000;
+			}
 			.container{
 				@include flexbox();
 				@include flex-direction(column)
@@ -32,6 +47,7 @@
 							font-size: .16rem;
 							height: .36rem;
 							line-height: .36rem;
+							@include ellipsis();
 						}
 						.text {
 							width: 100%;
@@ -134,6 +150,7 @@
 				@include flex-direction(column);
 				.empty {
 					@include flex();
+					width: 100%;
 				}
 				.DetailMainAddCar {
 					// height: 3.72rem;
@@ -264,18 +281,41 @@
 	}
 }
 //DetailGoodsShow
-.DetailGoodsShow {
+.goodsShowBox {
+	position: relative;
 	height: 100%;
 	width: 100%;
-	.imgBox {
+	.back {
+		position: absolute !important;
+		top: .25rem;
+		left: .25rem;
+		display: block;
+		width: .4rem;
+		height: .4rem;
+		background-color: #e2e2e2;
+		color: #f7b924;
+		font-size: .2rem;
+		text-align: center;
+		line-height: .4rem;
+		@include border(1px, #e2e2e2, solid, 50%);
+		z-index: 1000;
+	}
+	.DetailGoodsShow {
 		height: 100%;
 		width: 100%;
-		img {
+		ul {
 			height: 100%;
-			width: 100%;
+			.item {
+				height: 100%;
+				width: 100%;
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
 		}
-	}
-}		
+	}		
+}
 
 
 

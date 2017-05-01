@@ -14,10 +14,18 @@ export default class DetailMain extends React.Component {
 		}
 	}
 	addCarShow(IsShow){
-		console.log(IsShow);
 		this.setState({
 			IsShow: IsShow
 		})
+	}
+	addCarHidden(){
+		console.log(1111)
+		this.setState({
+			IsShow: false
+		})
+	}
+	goBack(){
+		this.props.goBack();
 	}
 	goToDetailShow(id){
 		this.props.lll(id);
@@ -28,12 +36,13 @@ export default class DetailMain extends React.Component {
 		}
 		return (
 			<div className="DetailMain">
+				<span className="back yo-ico" onClick={this.goBack.bind(this)}>&#xf07d;</span>
 				<div className="container">
 					<DetailMainList goodsListInfo={this.state.productInfo}/>
 					<DetailMainFooter addCarIsShow={this.addCarShow.bind(this)} onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
 				</div>
 				<div className="modal" style={show}>
-					<div className="empty"></div>
+					<div className="empty" onClick={this.addCarHidden.bind(this)} ></div>
 					<DetailMainAddCar goodsAddCarList={this.state.addCarList} goodsAddCarInfo={this.state.productInfo}/>
 				</div>
 			</div>
