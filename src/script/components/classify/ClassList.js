@@ -7,21 +7,24 @@ class ClassList extends React.Component{
 	gotoDetail(id){
 		this.props.router.push(`/detail/${id}`)
 	}
+	Zuji(data){
+		// console.log(this)
+	}
 	getID(id){
 		this.props.params.id
 	}
 	back() {
 	    this.props.router.goBack()
-	    console.log(this)
 	}
 	render(){
+		// console.log(this);
 		return(
 			<div className="classList">
-				<ClassHeader backHandler={this.back.bind(this)} getID={this.props.params.id} />
+				<ClassHeader backHandler={this.back.bind(this)} getID={this.props.params.id}/>
 				<Classifytopic />
-				<Classifylist gotoDetail={this.gotoDetail.bind(this)} getID={this.props.params.id} />
+				<Classifylist gotoDetail={this.gotoDetail.bind(this)} getID={this.props.params.id} Zuji={this.Zuji}/>
 			</div>
-			
+
 			)
 	}
 }

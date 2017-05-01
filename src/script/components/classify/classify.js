@@ -1,8 +1,6 @@
 import React from "react"
 import Header from "./Header"
 import {Link} from 'react-router'
-
-
 import Scroller from '../../../component_dev/scroller/src'
 
 
@@ -19,17 +17,17 @@ class Classify extends React.Component{
     }
     render(){
         // console.log(cat_id)
-        let lis = this.state.classList.map((value)=>{return (        
+        let lis = this.state.classList.map((value)=>{return (
             <li onClick={this.gotoList.bind(this,value.cat_id)}>
                 <img src={value.image} alt=""/>
                 <h1>{value.cat_name}</h1>
-            </li>              
+            </li>
         )})
         return(
             <div className="classbox">
                 <Header />
                 <Scroller ref="scroller" >
-                    <div className="Classify">               
+                    <div className="Classify">
                         <ul>
                             {lis}
                             <li>
@@ -44,11 +42,11 @@ class Classify extends React.Component{
                                 <img src="http://image.app.magicwe.com/images/201609/1473674198371194517.png" alt=""/>
                                 <h1>全景展示</h1>
                             </li>
-                        </ul> 
+                        </ul>
                     </div>
                 </Scroller>
             </div>
-            
+
         )
     }
 
