@@ -34,6 +34,9 @@ class DetailMain extends React.Component {
 	toGoodsShow(id){
 		this.props.goToDetailShow(id);
 	}
+	goToCart(){
+		this.props.goToCart();
+	}
 	render(){
 		let show = {
 			visibility: this.state.IsShow ? 'visible' : 'hidden'
@@ -42,7 +45,7 @@ class DetailMain extends React.Component {
 		return (
 			<div className="DetailMain">
 				<span className="back yo-ico" onClick={this.goBack.bind(this)}>&#xf07d;</span>
-				<div className="buyGoodsTypeNumber">
+				<div onClick={this.goToCart.bind(this)} className="buyGoodsTypeNumber">
 					<img src="/images/common_cart_on.png" alt=""/>
 					<span>{this.props.buyGoodsTypeNumber}</span>
 				</div>
