@@ -19,6 +19,7 @@ import Dingdan from './components/mine/dingdan/dingdan'
 import Zuji from './components/mine/zuji/zuji'
 import Youhui from './components/mine/youhuiquan/youhuiquan'
 import Guanli from './components/mine/guanli/guanli'
+import Dizhi from './components/mine/dizhi/dizhi'
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 
@@ -45,6 +46,7 @@ ReactDOM.render((
 			<Route path="/zuji" component={Zuji}/>
 			<Route path="/youhui" component={Youhui}/>
 			<Route path="/guanli" component={Guanli}/>
+			<Route path="/dizhi" component={Dizhi}/>
 		</Router>	
 	</Provider>
 	),(document.getElementById('root')))

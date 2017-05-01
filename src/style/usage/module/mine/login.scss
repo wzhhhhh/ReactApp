@@ -98,6 +98,9 @@
 				padding:.08rem;
 				@include flexbox();
 				@include border(0 0 1px 0,#eaeaea,solid);
+				.ldian{
+					color:#333;
+				}
 				li{
 					width: .86rem;
 					height:.7rem;

@@ -1,0 +1,41 @@
+.onlogin{
+	padding:.1rem;
+	.glist{
+		li{
+			@include flexbox();
+			padding:.15rem;
+			@include border(0 0 1px 0,#f0f0f0,solid);
+			img{
+				@include flex();
+				width: .57rem;
+				height:.57rem;
+			}
+			span{
+				color: #a2a3da;
+			}
+			.gqian{
+				width: .5rem;
+				color:#000;
+			}
+			.ghou{
+				@include flex();
+				text-align: right;
+			}
+			.gheader{
+				height:.57rem;
+				line-height: .57rem;
+			}
+		}
+
+	}
+	.gor{
+		width: 94%;
+		height: .52rem;
+		line-height: .52rem;
+		background-color:#ffbd1f;
+		color:#fff;
+		text-align: center;
+		font-size: .18rem; 
+		margin: .4rem auto;
+	}
+}
