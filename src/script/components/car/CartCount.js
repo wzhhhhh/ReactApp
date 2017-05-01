@@ -26,24 +26,24 @@ class CartCount extends React.Component{
 	// 		buyGoodsTypeNumber: this.props.total.real_goods_count
 	// 	})
 	// }
-	componentDidMount(){
-		let headers = new Headers({
-		'Content-Type': 'application/json'
-		 // 'Content-Type': 'application/x-www-form-urlencoded'
-		})
-		fetch(`/api/alertCart`,{
-			method: 'POST', 
-			headers: headers,
-			body: JSON.stringify({
-				goodsID: '110368',
-				number: 2
-			})
-		})
-		.then((response)=>response.json())
-		.then((res)=>{
-			console.log(res)
-		}).catch(e=>console.log(e))
-	}
+	// componentDidMount(){
+	// 	let headers = new Headers({
+	// 	'Content-Type': 'application/json'
+	// 	 // 'Content-Type': 'application/x-www-form-urlencoded'
+	// 	})
+	// 	fetch(`/api/alertCart`,{
+	// 		method: 'POST', 
+	// 		headers: headers,
+	// 		body: JSON.stringify({
+	// 			goodsID: '110368',
+	// 			number: 2
+	// 		})
+	// 	})
+	// 	.then((response)=>response.json())
+	// 	.then((res)=>{
+	// 		console.log(res)
+	// 	}).catch(e=>console.log(e))
+	// }
 }
 export default connect(
   cartStore().mapStateToProps,
