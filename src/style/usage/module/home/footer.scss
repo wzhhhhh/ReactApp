@@ -13,10 +13,26 @@
 		font-size:.12rem;
 		padding-top:.08rem;
 		color:#fff;
+		position: relative;
 		img{
 			width:.24rem;
 			height: .24rem;
 			margin-bottom:.06rem;
+		}
+		.buyGoodsTypeNumber {
+			position: absolute !important;
+			top: 0.03rem;
+			right: 0.07rem;
+			display: block;
+			width: .2rem;
+			height: .2rem;
+			background-color: #fdbd1d;
+			color: #fff;
+			font-size: .16rem;
+			text-align: center;
+			line-height: .2rem;
+			@include border(1px, #fdbd1d, solid, 50%);
+			z-index: 1001;
 		}
 		p{
 		}

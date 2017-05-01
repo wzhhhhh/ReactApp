@@ -16,7 +16,7 @@ export default () => {
 	}
 
 	//reduces
-	let reduces = (state={buyGoodsTypeNumber: 0}, action) => {
+	let reduces = (state={buyGoodsTypeNumber: 10}, action) => {
 		switch (action.type){
 			case 'CHECKIN':
 				return {
@@ -44,5 +44,4 @@ export default () => {
 		mapDispatchToProps,
 		cartStore
 	}
-
 }

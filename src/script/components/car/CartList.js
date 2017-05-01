@@ -11,10 +11,22 @@ class CartList extends React.Component{
 			goodsBuyNumberList: {}
 		}
 	}
- 	componentWillReceiveProps(nextProps){
+ 	// componentWillReceiveProps(nextProps){
+ 	// 	// console.log(nextProps)
+		// let obj = {};
+		// nextProps.goods_list.forEach((item) => {
+		// 	let id = item['goods_id'];
+		// 	let number = item['goods_number'];
+		// 	obj[id] = number;
+		// 	this.setState({
+		// 		goodsBuyNumberList: obj
+		// 	})	
+		// })
+ 	// }
+ 	componentDidMount(){
  		// console.log(nextProps)
 		let obj = {};
-		nextProps.goods_list.forEach((item) => {
+		this.props.goods_list.forEach((item) => {
 			let id = item['goods_id'];
 			let number = item['goods_number'];
 			obj[id] = number;
@@ -48,10 +60,11 @@ class CartList extends React.Component{
     							onChange={value => {
     								// console.log(value);
     								obj[id] = value.toString();
-    								// console.log(obj)
     								this.setState({
     									goodsBuyNumberList: obj
     								})
+    								console.log(obj)
+    								console.log(this.state.goodsBuyNumberList)
     							}}
 	    						min={1}
 							/>
@@ -62,6 +75,7 @@ class CartList extends React.Component{
 				</div>
 			)
 		})
+		// console.log(this.state.goodsBuyNumberList)
 		return(
 			<Scroller
 			    scrollX={false}
@@ -75,8 +89,6 @@ class CartList extends React.Component{
 		)
 	}
 }
-
-
 export default connect(
   cartStore().mapStateToProps,
   cartStore().mapDispatchToProps

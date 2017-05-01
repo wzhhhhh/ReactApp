@@ -3,8 +3,9 @@ import React from 'react'
 import DetailMainList from './DetailMainList.js'
 import DetailMainFooter from './DetailMainFooter.js'
 import DetailMainAddCar from './DetailMainAddCar.js'
-
-export default class DetailMain extends React.Component {
+import cartStore from '../../redux/cartStore';
+import { connect } from 'react-redux';
+class DetailMain extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
@@ -37,9 +38,14 @@ export default class DetailMain extends React.Component {
 		let show = {
 			visibility: this.state.IsShow ? 'visible' : 'hidden'
 		}
+		console.log(this)
 		return (
 			<div className="DetailMain">
 				<span className="back yo-ico" onClick={this.goBack.bind(this)}>&#xf07d;</span>
+				<div className="buyGoodsTypeNumber">
+					<img src="/images/common_cart_on.png" alt=""/>
+					<span>{this.props.buyGoodsTypeNumber}</span>
+				</div>
 				<div className="container">
 					<DetailMainList toGoodsShow={this.toGoodsShow.bind(this)} goodsListInfo={this.state.productInfo}/>
 					<DetailMainFooter addCarIsShow={this.addCarShow.bind(this)} onGoToDetailShow={this.goToDetailShow.bind(this)} goodsFooterInfo={this.state.productInfo}/>
@@ -69,3 +75,7 @@ export default class DetailMain extends React.Component {
 			})
 	}
 }
+export default connect(
+  cartStore().mapStateToProps,
+  cartStore().mapDispatchToProps
+)(DetailMain)

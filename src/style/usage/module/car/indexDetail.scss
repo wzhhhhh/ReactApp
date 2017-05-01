@@ -26,6 +26,38 @@
 				@include border(1px, #e2e2e2, solid, 50%);
 				z-index: 1000;
 			}
+			.buyGoodsTypeNumber {
+				position: absolute !important;
+				top: .25rem;
+				right: .25rem;
+				width: .4rem;
+				height: .4rem;
+				background-color: #e2e2e2;
+				@include border(1px, #e2e2e2, solid, 50%);
+				z-index: 1000;
+				@include flexbox();
+				@include align-items();
+				@include justify-content();
+				img {
+					height: 70%;
+					width: 70%;
+				}
+				span{
+					position: absolute !important;
+					top: -0.08rem;
+					right: -0.08rem;
+					display: block;
+					width: .2rem;
+					height: .2rem;
+					background-color: #fdbd1d;
+					color: #fff;
+					font-size: .16rem;
+					text-align: center;
+					line-height: .2rem;
+					@include border(1px, #fdbd1d, solid, 50%);
+					z-index: 1001;
+				}
+			}
 			.container{
 				@include flexbox();
 				@include flex-direction(column)
