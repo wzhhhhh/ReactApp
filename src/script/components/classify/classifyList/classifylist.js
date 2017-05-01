@@ -16,6 +16,13 @@ class Classifylist extends React.Component{
 	gotoDetail(goods_id){
 		this.props.gotoDetail(goods_id)
 	}
+	Zuji(data){
+		this.props.Zuji(data)
+		localStorage.setItem("info",data)
+
+		// console.log(a);
+		// localStorage.setItem("zuji",arr)
+	}
 
 	componentWillMount() {
 	    loading.show()
@@ -28,7 +35,16 @@ class Classifylist extends React.Component{
 	    return !0
 	}
 
+
 	render(){
+		// // console.log(this.props.Zuji(data))
+		// let arr = [];
+		// var a = localStorage.getItem("info");
+		// arr = arr.concat(a)
+		// localStorage.setItem("arr",arr)
+		// var array = localStorage.getItem("arr");
+		//
+		// console.log(array);
 		return(
 			<div className="clist">
 				<List
@@ -38,13 +54,15 @@ class Classifylist extends React.Component{
 				    	if (!this.isEmptyObject(value)) {
 					        return (
 				                <li onClick={this.gotoDetail.bind(this,value.goods_id)}>
-									<img src={value.list_img} alt=""/>
-									<p>{value.goods_name}</p>
-									<b>{`￥${value.miaohui_price}`}</b>
+									<div onClick={this.Zuji.bind(this,[value.list_img,value.goods_name,value.miaohui_price])}>
+										<img src={value.list_img} alt="" />
+										<p>{value.goods_name}</p>
+										<b>{`￥${value.miaohui_price}`}</b>
+									</div>
 								</li>
 				            )
 					    }
-				    }}				
+				    }}
 					usePullRefresh={true}
 					onRefresh={() => {
 				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
@@ -60,15 +78,15 @@ class Classifylist extends React.Component{
 				    onLoad={() => {
 				        fetch(`/api/productList?page=${this.state.page++}&size=10&catID=${this.props.getID}&tag=`)
 			    		.then((response)=>response.json())
-			    		.then((res)=>{		    		
+			    		.then((res)=>{
 		    				if (res.list.goods.length > 0) {
 		    					this.setState({
 			                      List:this.state.List.concat(res.list.goods)
-			                    })			       
+			                    })
 		                    	this.refs.list.stopLoading(true);
 		                   	}else{
 		                    this.refs.list.resetLoadStatus(false);
-		                   	}				    							    			
+		                   	}
 			    		})
 				        this.refs.list.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
 				    }}
@@ -86,7 +104,7 @@ class Classifylist extends React.Component{
     			})
     			loading.hide()
 	    		// console.log(this.state.List)
-    				
+
     		})
     }
 }
