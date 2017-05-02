@@ -10,24 +10,24 @@ export default class  LoginList extends React.Component {
 					<span><Link to="/dingdan" className="ldian">查看所有订单</Link></span>
 				</div>
 				<ul className="llist">
-					<li>
+					<Link to="/dingdan" className="ldian"><li>
 						<span>0</span>
-						<img src="./images/profile_pay.png" alt="" />
+						<img src="http://m.miaohui.com/static/src/img/my/daifukuan.png" alt="" />
 						代付款
-					</li>
-					<li className="lli">
+					</li></Link>
+					<Link to="/dingdan" className="ldian"><li className="lli">
 						<span>0</span>
-						<img src="./images/profile_transport.png" alt="" />
+						<img src="http://m.miaohui.com/static/src/img/my/daishouhuo.png" alt="" />
 						待收货
-					</li>
+					</li></Link>
 					<li className="lli">
 						<span>0</span>
-						<img src="./images/profile_comment.png" alt="" />
+						<img src="http://m.miaohui.com/static/src/img/my/miaozuan.png" alt="" />
 						待评论
 					</li>
 					<li>
 						<span>0</span>
-						<img src="./images/profile_like.png" alt="" />
+						<img src="http://m.miaohui.com/static/src/img/my/wodeshoucang.png" alt="" />
 						我的心愿单
 					</li>
 				</ul>

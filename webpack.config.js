@@ -25,6 +25,11 @@ module.exports = {
 				target:'http://localhost:9000',
 				changeOrigin:true,
 				pathRewrite:{'^/nlogin':''}
+			},
+			'/weizhi':{
+				target:'http://api.map.baidu.com',
+				changeOrigin:true,
+				pathRewrite:{'^/weizhi':''}
 			}
 
 		}
