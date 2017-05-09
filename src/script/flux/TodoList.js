@@ -8,7 +8,7 @@ export default class TodoList extends React.Component {
 
     return (
       <div>
-        <input type="text" value=""/>
+        <input ref='inputWord' type="text" onKeyUp={this.props.addItemHandler}/>
         <ul>jjjjj</ul>
       </div>
     )
