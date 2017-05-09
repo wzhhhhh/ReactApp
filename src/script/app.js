@@ -20,6 +20,7 @@ import Zuji from './components/mine/zuji/zuji'
 import Youhui from './components/mine/youhuiquan/youhuiquan'
 import Guanli from './components/mine/guanli/guanli'
 import Dizhi from './components/mine/dizhi/dizhi'
+import Todo from './flux/TodoControll';
 import {Router, Route, hashHistory, browserHistory, IndexRedirect} from 'react-router'
 
 
@@ -47,6 +48,7 @@ ReactDOM.render((
 			<Route path="/youhui" component={Youhui}/>
 			<Route path="/guanli" component={Guanli}/>
 			<Route path="/dizhi" component={Dizhi}/>
-		</Router>	
+			<Route path="/todo" component={Todo}/>
+		</Router>
 	</Provider>
 	),(document.getElementById('root')))
