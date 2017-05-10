@@ -39,4 +39,8 @@ export default class Todo extends React.Component {
   componentDidMount(){
     TodoStore.addChangeListener(this._onchange.bind(this))
   }
+
+  componentWillUnmount(){
+    TodoStore.removeChangeListener(this._onchange.bind(this))
+  }
 }
