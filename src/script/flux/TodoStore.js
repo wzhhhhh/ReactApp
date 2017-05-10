@@ -9,5 +9,11 @@ export default Object.assign({}, EventEmitter.prototype, {
   },
   removeItem(index){
     this.items.splice(index, 1);
+  },
+  emitChange(){
+    this.emit('change')
+  },
+  addChangeListener(callback){
+    this.on('change', callback)
   }
 })

@@ -3,13 +3,17 @@ import TodoStore from './TodoStore'
 
 let dispatcher = new Dispatcher();
 
-export default dispatcher.register((action) => {
+dispatcher.register((action) => {
   switch (action.type) {
     case 'ADD':
-      TodoStore.addItem(action.text)
+      TodoStore.addItem(action.text);
+      TodoStore.emitChange();
       break;
-    case 'REMOve':
-      TodoStore.removeItem(index)
+    case 'REMOVE':
+      TodoStore.removeItem(action.text);
+      TodoStore.emitChange();
       break;
   }
 })
+
+export default dispatcher;
